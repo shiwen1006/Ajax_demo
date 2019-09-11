@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script>
+function checkExists(){
+    var username=document.getElementById("username").value;
+    var password=document.getElementById("password").value;
+	var xhr=new XMLHttpRequest();
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4&&xhr.status==200){
+			var data=xhr.responseText;
+			if(data==="true"){
+				document.getElementById("info").innerHTML="用户名输入合法";
+			}else{
+				document.getElementById("info").innerHTML="用户名已存在";
+			}
+		}
+	}
+
+	//xhr.open("get","checkUsername?username="+username,true);
+    xhr.open("post","login",true);
+    xhr.setRequestHeader("Content-type","application/json");
+    var obj  = {};
+    obj.username = username;
+    obj.password = password;
+    xhr.send(JSON.stringify(obj));
+}
+	
+</script>
+</head>
+<body>
+	用户名：<input type="text" id="username" >
+	<label id="info"></label>
+	密码：<input type="password" id="password">
+	<label id="pwd"></label>
+	<input type="button" onclick=checkExists() value="Submit">
+</body>
+</html>
