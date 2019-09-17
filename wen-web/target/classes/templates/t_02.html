@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script scr="../static/js/jquery-3.4.1.js"></script>
+    <style>
+        select{
+            width: 200px;
+            height: 26px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $.get("hobby",function(data){
+                for(var i=0;i<data.length;i++){
+                    //data返回类型是。。。
+                    var option=new Option("球类","1");
+                    $("#hobby").append(option);
+                }
+            });
+            $("#hobby").change(function(){
+                var itemId=this.value;
+                if(itemId == 0){
+                    return;
+                }
+                $.post("hobby",{"itemId":itemId}, function(data){
+                    for(var i=0;i<data.length;i++){
+                        var option=new Option();
+                        $("#hobby").append(option);
+                    }
+                })
+            });
+
+            $("#curse").click(function(){
+                var curseId=this.value;
+                if(curseId == 0){
+                    return;
+                }
+                $.post("course",{"couese":curseId},function(data){
+                    //data返回类型是。。。
+                    $("<h3>").text("兴趣类型："+hobby+"课程名称"+courseName);
+                })
+
+            })
+        });
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <select id="hobby">
+            <option value="0">请选择兴趣类型</option>
+        </select>
+        <select id="course">
+            <option value="0">请选择课程类型</option>
+        </select>
+        <div id="info">
+            这里显示选中的兴趣类型和课程类型
+        </div>
+    </form>
+</body>
+</html>

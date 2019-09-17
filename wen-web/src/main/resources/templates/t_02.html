@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script scr="../static/js/jquery-3.4.1.js"></script>
+    <style>
+        select{
+            width: 200px;
+            height: 26px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $.post("province",function(data){
+
+                $.each(data,function(index,item){
+                      var option=new Option();
+                      option.value=item.pid;
+                      option.text=item.pname;
+                      $("#province").append(option);
+                })
+
+            });
+            $("#province").change(function(){
+                //:gt 选择器选取 index 值高于指定数的元素
+                $("#city > option:gt(0)").remove();
+                var pid=$(this).val();
+                if(pid == 0){
+                    return;
+                }
+                $.post("city",{"pid":pid}, function(data){
+                    $.each(data,function(){
+                        var option=new Option();
+                        option.value=item.cid;
+                        option.text=item.cname;
+                        $("#city").append(option);
+                    })
+                })
+            });
+
+            $("#city").click(function(){
+                var cid=this.value;
+                if(cid == 0){
+                    return;
+                }
+                $.post("city",{"cid":cid},function(data){
+                    $("<h3></h3>").text("省份："+pname+"城市"+cname);
+                })
+
+            })
+        });
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <select id="province">
+            <option value="0">请选择</option>
+        </select>
+        <select id="city">
+            <option value="0">请选择</option>
+        </select>
+        <div id="info">
+            这里显示选中的兴趣类型和课程类型
+        </div>
+    </form>
+</body>
+</html>
