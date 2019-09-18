@@ -12,23 +12,24 @@
     </style>
     <script>
         $(function(){
-            $.get("province", function (data) {
+            $.get("/city/province", function (data) {
                 $.each(data,function(index,item){
-                      var option=new Option();
+                    var option=new Option();
                     option.value = item.code;
                     option.text = item.name;
-                      $("#province").append(option);
+                    $("#province").append(option);
                 })
 
             });
             $("#province").change(function(){
                 //:gt 选择器选取 index 值高于指定数的元素
                 $("#city > option:gt(0)").remove();
+                $("#area > option:gt(0)").remove();
                 var code = $(this).val();
                 if (code === 0) {
                     return;
                 }
-                $.get("city/" + code, function (data) {
+                $.get("/city/city/" + code, function (data) {
                     $.each(data, function (index, item) {
                         var option=new Option();
                         option.value = item.code;
@@ -39,19 +40,36 @@
             });
 
             $("#city").change(function () {
+                $("#area > option:gt(0)").remove();
                 var code = this.value;
                 if (code === 0) {
                     return;
                 }
-                $.get("city/" + code, function (data) {
+                $.get("/city/city/" + code, function (data) {
                     $.each(data, function (index, item) {
                         var option = new Option();
                         option.value = item.code;
                         option.text = item.name;
                         $("#area").append(option);
+
                     })
                 })
 
+            })
+
+            $("#area").change(function () {
+                var code = this.value;
+                if (code === 0) {
+                    return;
+                }
+                $("#info").html($("#province").find("option:selected").text());
+            })
+
+
+
+
+            $.get("/json/languages.json",function(data){
+               console(data);
             })
         });
 
@@ -70,7 +88,7 @@
             <option value="0">请选择</option>
         </select>
         <div id="info">
-            这里显示选中的兴趣类型和课程类型
+
         </div>
     </form>
 </body>
