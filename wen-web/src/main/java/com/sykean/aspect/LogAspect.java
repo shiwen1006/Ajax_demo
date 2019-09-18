@@ -1,6 +1,5 @@
 package com.sykean.aspect;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -26,9 +25,9 @@ import java.util.Arrays;
 @Aspect
 @Order(3)
 @Component
-public class SystemLogAspect {
+public class LogAspect {
 
-    private static Logger logger = LoggerFactory.getLogger(SystemLogAspect.class);
+    private static Logger logger = LoggerFactory.getLogger(LogAspect.class);
 
     /**
      * 定义一个切入点
