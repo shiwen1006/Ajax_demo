@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#save").click=function(){
+                $.Ajax({
+                    type:"post",
+                    url:"",
+                    data:JSON.stringify({
+                        "uname":$("#uname").val(),
+                        "uwork_num":$("#uwork_num").val(),
+                        "uduty":$("#uduty").find("option :selected").val(),
+                        "uwork_kind":$("#uwork_kind").find("option :selected").text(),
+                        "sex":$('input[type=radio][name=sex]:checked').val(),
+                        "regist":$('input[type=radio][name=regist]:checked').val(),
+                    })
+                })
+                //新增完成显示表格中
+                $.get("",function(data){
+                    $.each(data,function(index,item){
+                        $("<tr></tr>").append("<td>"+item.id+"</td>")
+                                      .append("<td>"+item.uname+"</td>")
+                                      .append("<td>"+item.uwork_num+"</td>")
+                                      .append("<td>"+item.uduty+"</td>")
+                                      .append("<td>"+item.uwork_kind+"</td>")
+                                      .append("<td>"+item.sex+"</td>")
+                                      .append("<td>"+item.regist+"</td>")
+                                      .appendTo($("tbody"))
+
+                    })
+                })
+
+            }
+            //查询
+            var searchStr=$("#search").val();
+            $.get("",{"searchStr":searchStr},function(data){
+                $.each(data,function(index,item){
+                    $("<tr></tr>").append("<td>"+item.id+"</td>")
+                        .append("<td>"+item.uname+"</td>")
+                        .append("<td>"+item.uwork_num+"</td>")
+                        .append("<td>"+item.uduty+"</td>")
+                        .append("<td>"+item.uwork_kind+"</td>")
+                        .append("<td>"+item.sex+"</td>")
+                        .append("<td>"+item.regist+"</td>")
+                        .appendTo($("tbody"))
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <div class="container-fluid" style="width:1800px;">
+
+
+        <div class="col-xs-4" style="float: left">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="uname" class="col-xs-2 control-label">姓名</label>
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" id="uname">
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="uwork_num" class="col-xs-2 control-label">工号</label>
+                    <div class="col-xs-5">
+                        <input type="text" class="form-control" id="uwork_num">
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="uduty" class="col-xs-2 control-label">职务</label>
+                    <div class="col-xs-5">
+                        <select class="form-control control-label" id="uduty">
+                            <option value="0">请选择</option>
+                        </select>
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="uwork_kind" class="col-xs-2 control-label">工种</label>
+                    <div class="col-xs-5">
+                        <select class="form-control control-label" id="uwork_kind">
+                            <option value="0">请选择</option>
+                        </select>
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-2 control-label">性别</label>
+                    <div class="col-xs-5">
+                       <label class="radio-inline" for="male">
+                           <input type="radio" name="sex" id="male" value="0" checked>男
+                       </label>
+                        <label class="radio-inline" for="female">
+                            <input type="radio" name="sex" id="female" value="1">女
+                        </label>
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label  class="col-xs-2 control-label">是否注册</label>
+                    <div class="col-xs-5">
+                        <label class="radio-inline">
+                            <input type="radio" name="regist" id="regist" value="0">已注册
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="regist" id="unregist" value="1" checked>未注册
+                        </label>
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-success col-xs-2 col-xs-offset-1" id="save">保存</button>
+                    <button type="button" class="btn btn-success col-xs-2 col-xs-offset-1" id="reset">重置</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-xs-8" style="float: left">
+            <div class="row" style="margin-bottom: 50px">
+                <div class="col-xs-12">
+                    <input type="button" class="btn  btn-default" value="新增"></input>
+                    <div class="search" style="float:right">
+                        <input type="text">
+                        <input type="button" id="search" class="btn  btn-default" value="查询"></input>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <table class="table table-bordered" style="text-align: center">
+                    <thead>
+                    <tr class="active">
+                        <td>序号</td>
+                        <td>姓名</td>
+                        <td>工号</td>
+                        <td>职务</td>
+                        <td>工种</td>
+                        <td>是否已注册</td>
+                        <td>详情</td>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
