@@ -52,19 +52,26 @@
 
             }
             //查询
-            var searchStr=$("#search").val();
-            $.get("",{"searchStr":searchStr},function(data){
-                $.each(data,function(index,item){
-                    $("<tr></tr>").append("<td>"+item.id+"</td>")
-                        .append("<td>"+item.uname+"</td>")
-                        .append("<td>"+item.uwork_num+"</td>")
-                        .append("<td>"+item.uduty+"</td>")
-                        .append("<td>"+item.uwork_kind+"</td>")
-                        .append("<td>"+item.sex+"</td>")
-                        .append("<td>"+item.regist+"</td>")
-                        .appendTo($("tbody"))
+            $("#search").click=function(){
+                var searchStr=$("#search").val();
+                $.get("",{"searchStr":searchStr},function(data){
+                    if(data==null){
+                        $("<tr></tr>").apppend("<td colspan='7'>"+暂无数据+"</td>")
+                                      .appendTo($("tbody"));
+                    }
+                    $.each(data,function(index,item){
+                        $("<tr></tr>").append("<td>"+item.id+"</td>")
+                            .append("<td>"+item.uname+"</td>")
+                            .append("<td>"+item.uwork_num+"</td>")
+                            .append("<td>"+item.uduty+"</td>")
+                            .append("<td>"+item.uwork_kind+"</td>")
+                            .append("<td>"+item.sex+"</td>")
+                            .append("<td>"+item.regist+"</td>")
+                            .appendTo($("tbody"))
+                    })
                 })
-            })
+            }
+
         })
     </script>
 </head>
