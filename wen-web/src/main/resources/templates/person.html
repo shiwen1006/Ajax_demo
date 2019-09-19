@@ -16,14 +16,24 @@
                 $.Ajax({
                     type:"post",
                     url:"",
+                    dataType:"json",
+                    contentType : "application/json;charset=utf-8",
                     data:JSON.stringify({
                         "uname":$("#uname").val(),
                         "uwork_num":$("#uwork_num").val(),
                         "uduty":$("#uduty").find("option :selected").val(),
                         "uwork_kind":$("#uwork_kind").find("option :selected").text(),
                         "sex":$('input[type=radio][name=sex]:checked').val(),
-                        "regist":$('input[type=radio][name=regist]:checked').val(),
-                    })
+                        "regist":$('input[type=radio][name=regist]:checked').val()
+                    }),
+                    success:function(data){
+                        if(data==="true"){
+                            alert("人员新增成功")
+                        }else{
+                            alert("人员新增失败")
+                        }
+                    }
+
                 })
                 //新增完成显示表格中
                 $.get("",function(data){
