@@ -16,9 +16,16 @@ import java.util.List;
 @Controller
 public class CityController {
 
+    //http://localhost:8080/city/index
     @GetMapping("index")
     public String index() {
         return "t_02";
+    }
+
+    //http://localhost:8080/city/person
+    @GetMapping("person")
+    public String person() {
+        return "person";
     }
 
     @ResponseBody

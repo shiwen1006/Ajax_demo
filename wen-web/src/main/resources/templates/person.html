@@ -52,8 +52,9 @@
 
             }
             //查询
-            $("#search").click=function(){
+            $("#search").click(function () {
                 var searchStr=$("#search").val();
+                console.log(searchStr)
                 $.get("",{"searchStr":searchStr},function(data){
                     if(data==null){
                         $("<tr></tr>").apppend("<td colspan='7'>"+暂无数据+"</td>")
@@ -70,7 +71,7 @@
                             .appendTo($("tbody"))
                     })
                 })
-            }
+            })
 
         })
     </script>
