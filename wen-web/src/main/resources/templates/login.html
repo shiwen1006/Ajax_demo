@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-3.4.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css" >
+    <link rel="stylesheet" href="/css/bootstrap-theme.css">
+    <style>
+        #contain{
+            background: rgba(0,0,0,0.3);
+            width: 1920px;
+            height: 978px;
+            position: relative;
+        }
+        img{
+            width: 1920px;
+            height: 978px;
+            position: relative;
+            z-index: -1;
+        }
+        .login{
+            width: 600px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #1b6d85;
+            text-align: center;
+        }
+        #username,#password{
+            width: 200px;
+            height: 30px;
+        }
+        span{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            line-height: 50px;
+            text-align: right;
+            margin-right:20px;
+        }
+        #save{
+            margin: 20px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="contain">
+       <div class="login">
+           <form>
+               <span>用户名</span><input type="text" id="username"><br>
+               <span>密码</span><input type="password" id="password"><br>
+               <input type="button" id="save" value="登录">
+
+           </form>
+       </div>
+
+    </div>
+
+</body>
+</html>

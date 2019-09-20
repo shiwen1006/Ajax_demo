@@ -11,8 +11,74 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
+        /*$(function() {
+            //姓名校验
+            function timeFormCheck(){
+                //姓名校验
+                let $unameErrorInfo = $("#unameErrInfo");
+                $("#uname").blur(function () {
+                    let $uname = $("#uname").val();
+                    if ($uname.length < 1) {
+                        $unameErrorInfo.text("姓名不能为空");
+                        return false;
+                    }
+                    if (!/^([\u4e00-\u9fa5A-Za-z0-9,.?!;，。？！、；])*$/.test($uname)) {
+                        $unameErrorInfo.text("姓名不能包含特殊字符");
+                        return false;
+                    }
+                })
+                $("#uname").focus(function () {
+                    $unameErrorInfo.text("");
+                })
+                //工号校验
+                let $uwork_num_ErrInfo=$("#uwork_num_ErrInfo");
+                //工号不能包含数字
+                $("#uwork_num").blur(function(){
+                    let $uwork_num=$("#uwork_num").val();
+                    if ($uwork_num.length < 1) {
+                        $uwork_num_ErrInfo.text("工号不能为空");
+                        return false;
+                    }
+                    if(!/^-?\d+$/.test($uwork_num)){
+                        $uwork_num_ErrInfo.text("工号只能为整数");
+                        return false;
+                    }
+                })
+                $("#uwork_num").focus(function () {
+                    $uwork_num_ErrInfo.text("");
+                })
+            }
+
+
+
+        })*/
         $(function(){
-            $("#save").click=function(){
+            $("#save").click(function(){
+                let shift_val=[];
+                //获取人员排班复选框中的值
+                $('input[type=checkbox][name=shift]:checked').map(function(){
+                    shift_val.push($(this).val());
+                })
+
+                //职务获取
+                $("#uduty").get("",function(data){
+                    $.each(data,function(index,item){
+                        let option = new Option();
+                        option.value=item.id;
+                        option.text=item.dutyName;
+                        option.appendTo($("#uduty"));
+                    })
+                })
+                //工种获取
+                $("#uwork_kind").get("",function(data){
+                    $.each(data,function(index,item){
+                        let option = new Option();
+                        option.value=item.id;
+                        option.text=item.workKindName;
+                        option.appendTo($("#uwork_kind"));
+                    })
+                })
+
                 $.Ajax({
                     type:"post",
                     url:"",
@@ -24,6 +90,7 @@
                         "uduty":$("#uduty").find("option :selected").val(),
                         "uwork_kind":$("#uwork_kind").find("option :selected").text(),
                         "sex":$('input[type=radio][name=sex]:checked').val(),
+                        "shift":JSON.stringify(shift_val),
                         "regist":$('input[type=radio][name=regist]:checked').val()
                     }),
                     success:function(data){
@@ -43,20 +110,20 @@
                                       .append("<td>"+item.uwork_num+"</td>")
                                       .append("<td>"+item.uduty+"</td>")
                                       .append("<td>"+item.uwork_kind+"</td>")
-                                      .append("<td>"+item.sex+"</td>")
+                                      .append("<td>"+item.shift+"</td>")
                                       .append("<td>"+item.regist+"</td>")
                                       .appendTo($("tbody"))
 
                     })
                 })
 
-            }
+            })
             //查询
             $("#search").click(function () {
                 var searchStr=$("#search").val();
-                console.log(searchStr)
+                //console.log(searchStr)
                 $.get("",{"searchStr":searchStr},function(data){
-                    if(data==null){
+                    if(data.length===0){
                         $("<tr></tr>").apppend("<td colspan='7'>"+暂无数据+"</td>")
                                       .appendTo($("tbody"));
                     }
@@ -66,37 +133,46 @@
                             .append("<td>"+item.uwork_num+"</td>")
                             .append("<td>"+item.uduty+"</td>")
                             .append("<td>"+item.uwork_kind+"</td>")
-                            .append("<td>"+item.sex+"</td>")
+                            .append("<td>"+item.shift+"</td>")
                             .append("<td>"+item.regist+"</td>")
                             .appendTo($("tbody"))
                     })
                 })
             })
 
+
+
+
+
         })
     </script>
 </head>
 <body>
 
-    <div class="container-fluid" style="width:1800px;">
+    <div class="container-fluid" style="width:1800px;padding-top: 50px">
 
 
-        <div class="col-xs-4" style="float: left">
+        <div class="col-xs-4" style="float: left;padding-top: 90px">
             <form class="form-horizontal">
+                <!--姓名-->
                 <div class="form-group">
                     <label for="uname" class="col-xs-2 control-label">姓名</label>
                     <div class="col-xs-5">
-                        <input type="text" class="form-control" id="uname">
+                        <input type="text" class="form-control" id="uname" maxlength="10">
                     </div>
+                    <label id="unameErrInfo" class="col-xs-4 control-label"></label>
                     <br>
                 </div>
+                <!--工号-->
                 <div class="form-group">
                     <label for="uwork_num" class="col-xs-2 control-label">工号</label>
                     <div class="col-xs-5">
                         <input type="text" class="form-control" id="uwork_num">
                     </div>
+                    <label id="uwork_num_ErrInfo" class="col-xs-4 control-label"></label>
                     <br>
                 </div>
+                <!--职务-->
                 <div class="form-group">
                     <label for="uduty" class="col-xs-2 control-label">职务</label>
                     <div class="col-xs-5">
@@ -106,6 +182,7 @@
                     </div>
                     <br>
                 </div>
+                <!--工种-->
                 <div class="form-group">
                     <label for="uwork_kind" class="col-xs-2 control-label">工种</label>
                     <div class="col-xs-5">
@@ -115,6 +192,7 @@
                     </div>
                     <br>
                 </div>
+                <!--性别-->
                 <div class="form-group">
                     <label class="col-xs-2 control-label">性别</label>
                     <div class="col-xs-5">
@@ -127,18 +205,38 @@
                     </div>
                     <br>
                 </div>
+                <!--生物特征-->
                 <div class="form-group">
                     <label  class="col-xs-2 control-label">是否注册</label>
                     <div class="col-xs-5">
-                        <label class="radio-inline">
-                            <input type="radio" name="regist" id="regist" value="0">已注册
+                        <label class="radio-inline" for="regist">
+                            <input type="radio" name="isregist" id="regist" value="0">已注册
                         </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="regist" id="unregist" value="1" checked>未注册
+                        <label class="radio-inline" for="unregist">
+                            <input type="radio" name="isregist" id="unregist" value="1" checked>未注册
                         </label>
                     </div>
                     <br>
                 </div>
+                <!--人员排班-->
+                <div class="form-group">
+                    <label  class="col-xs-2 control-label">人员排班</label>
+                    <div class="col-xs-5">
+                        <label class="checkbox-inline">
+                            <input type="checkbox"  name="shift" id="four_sign" value="4">四签制
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox"  name="shift" id="three_sign" value="3" checked>三签制
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox"  name="shift" id="two_sign" value="2" checked>两签制
+                        </label>
+                    </div>
+                    <br>
+                </div>
+
+
+
                 <div class="form-group">
                     <button type="button" class="btn btn-success col-xs-2 col-xs-offset-1" id="save">保存</button>
                     <button type="button" class="btn btn-success col-xs-2 col-xs-offset-1" id="reset">重置</button>
@@ -165,6 +263,7 @@
                         <td>工号</td>
                         <td>职务</td>
                         <td>工种</td>
+                        <td>人员排班</td>
                         <td>是否已注册</td>
                         <td>详情</td>
                     </tr>

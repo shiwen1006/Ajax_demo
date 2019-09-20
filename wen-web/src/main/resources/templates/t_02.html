@@ -61,7 +61,7 @@
                 if (code === 0) {
                     return;
                 }
-                $("#info").html($("#province").find("option:selected").text());
+                $("#info").html($("#province").find("option:selected").text()+$("#city").find("option :selected").text());
             })
 
 

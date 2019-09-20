@@ -22,11 +22,17 @@ public class CityController {
         return "t_02";
     }
 
+    @GetMapping("login")
+    public String login() {
+        return "login";
+    }
+
     //http://localhost:8080/city/person
     @GetMapping("person")
     public String person() {
         return "person";
     }
+
 
     @ResponseBody
     @GetMapping("province")
