@@ -9,15 +9,28 @@ spring:
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
-  profiles: 
-    active: dev
   http:
     multipart:
       max-file-size: 30Mb
       max-request-size: 30Mb
-  devtools:
-      restart:
-        enabled: true
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3306/wen_db?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+      username: root
+      password: 123456
+      initialSize: 10
+      minIdle: 30
+      maxActive: 200
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 30000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat
 #log
 logging:
   config: classpath:logback.xml
