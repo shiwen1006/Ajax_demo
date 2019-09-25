@@ -1,7 +1,9 @@
 package com.sykean.common;
 
 import io.swagger.annotations.ApiModel;
+import lombok.Builder;
 
+@Builder
 @ApiModel("分页res")
 public class PageRes<T> {
 
