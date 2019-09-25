@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script scr="../static/js/jquery-3.4.1.js"></script>
+    <script src="/js/jquery-3.4.1.js" type="text/javascript"></script>
     <style>
         select{
             width: 200px;
@@ -12,36 +12,63 @@
     </style>
     <script>
         $(function(){
-            $.get("hobby",function(data){
-                for(var i=0;i<data.length;i++){
-                    //data返回类型是。。。
-                    var option=new Option("球类","1");
-                    $("#hobby").append(option);
-                }
+            $.get("/city/province", function (data) {
+                $.each(data,function(index,item){
+                    var option=new Option();
+                    option.value = item.code;
+                    option.text = item.name;
+                    $("#province").append(option);
+                })
             });
-            $("#hobby").change(function(){
-                var itemId=this.value;
-                if(itemId == 0){
+            $("#province").change(function(){
+                //:gt 选择器选取 index 值高于指定数的元素
+                $("#city > option:gt(0)").remove();
+                $("#area > option:gt(0)").remove();
+                var code = $(this).val();
+                if (code === 0) {
                     return;
                 }
-                $.post("hobby",{"itemId":itemId}, function(data){
-                    for(var i=0;i<data.length;i++){
+                $.get("/city/city/" + code, function (data) {
+                    $.each(data, function (index, item) {
                         var option=new Option();
-                        $("#hobby").append(option);
-                    }
+                        option.value = item.code;
+                        option.text = item.name;
+                        $("#city").append(option);
+                    })
                 })
             });
 
-            $("#curse").click(function(){
-                var curseId=this.value;
-                if(curseId == 0){
+            $("#city").change(function () {
+                $("#area > option:gt(0)").remove();
+                var code = this.value;
+                if (code === 0) {
                     return;
                 }
-                $.post("course",{"couese":curseId},function(data){
-                    //data返回类型是。。。
-                    $("<h3>").text("兴趣类型："+hobby+"课程名称"+courseName);
+                $.get("/city/city/" + code, function (data) {
+                    $.each(data, function (index, item) {
+                        var option = new Option();
+                        option.value = item.code;
+                        option.text = item.name;
+                        $("#area").append(option);
+
+                    })
                 })
 
+            })
+
+            $("#area").change(function () {
+                var code = this.value;
+                if (code === 0) {
+                    return;
+                }
+                $("#info").html($("#province").find("option:selected").text()+$("#city").find("option :selected").text());
+            })
+
+
+
+
+            $.get("/json/languages.json",function(data){
+               console(data);
             })
         });
 
@@ -50,14 +77,17 @@
 
 <body>
     <form>
-        <select id="hobby">
-            <option value="0">请选择兴趣类型</option>
+        <select id="province">
+            <option value="0">请选择</option>
         </select>
-        <select id="course">
-            <option value="0">请选择课程类型</option>
+        <select id="city">
+            <option value="0">请选择</option>
+        </select>
+        <select id="area">
+            <option value="0">请选择</option>
         </select>
         <div id="info">
-            这里显示选中的兴趣类型和课程类型
+
         </div>
     </form>
 </body>
