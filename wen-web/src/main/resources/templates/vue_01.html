@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jQuery/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <style>
+        .staic{
+            background:pink;
+            width: 200px;
+            height: 200px;
+        }
+        .active{
+            color:green;
+        }
+        .text-danger{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<!--我们可以把一个数组传给 v-bind:class，以应用一个 class 列表-->
+<div  id="app">
+    <div :class="[activeClass,errorClass]" class='staic' v-text="message"></div>
+    <!--绑定内联样式-->
+    <div :style="{color:activeColor,background:activeBackgroundColor}">绑定内联样式</div>
+    <!--绑定内联样式  对象语法-->
+    <div :style="objectClass">绑定内联样式对象语法</div>
+    <!--条件渲染-->
+    <h3 v-if="10>11">这里显示10>9</h3>
+    <h3 v-else>Oh no 看来这里10不大于9</h3>
+
+    <!--在 <template> 元素上使用 v-if 条件渲染分组-->
+    <template v-if="10>9">
+        <p>白日依山尽</p>
+        <p>黄河入海流</p>
+    </template>
+
+    <!--你可以使用 v-else 指令来表示 v-if 的“else 块”-->
+    <div v-if="Math.random()>0.5">Now you  see me</div>
+    <div v-else>Now you don't</div>
+
+</div>
+
+<script>
+    var vm = new Vue({
+        el : "#app",
+        data : {
+            message : '数组切换Class',
+            activeClass : 'active',
+            errorClass : 'text-danger',
+
+            activeColor:'yellow',
+            activeBackgroundColor:'green',
+
+            objectClass:{
+                color:'pink',
+                border: '1px solid #ccc'
+            }
+
+
+        }
+
+    })
+</script>
+</body>
+</html>
