@@ -875,3 +875,279 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'duty'
 2019-09-27 17:33:32.418 [http-nio-8080-exec-2] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
 2019-09-27 17:33:32.419 [http-nio-8080-exec-2] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 3
 2019-09-27 17:33:32.420 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 4 ms, random: 2P1RsEyf, return data:PageRes{count=3, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=3, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:41:28.941 [main] INFO  com.sykean.SykeanWebApplication -Starting SykeanWebApplication on shiwen-PC with PID 14316 (I:\ven_git\Ajax_demo\wen-web\target\classes started by shiwen in I:\ven_git\Ajax_demo)
+2019-09-27 17:41:28.943 [main] INFO  com.sykean.SykeanWebApplication -No active profile set, falling back to default profiles: default
+2019-09-27 17:41:29.164 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29d89d5d: startup date [Fri Sep 27 17:41:29 CST 2019]; root of context hierarchy
+2019-09-27 17:41:29.893 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory -Overriding bean definition for bean 'statFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=druidConfig; factoryMethodName=statFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/sykean/config/DruidConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration; factoryMethodName=statFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/stat/DruidFilterConfiguration.class]]
+2019-09-27 17:41:30.293 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bfe8e95] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-27 17:41:30.763 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2019-09-27 17:41:30.772 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-09-27 17:41:30.773 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-09-27 17:41:30.947 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-09-27 17:41:30.948 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1784 ms
+2019-09-27 17:41:31.261 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-09-27 17:41:31.263 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2019-09-27 17:41:31.263 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-09-27 17:41:31.264 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Servlet statViewServlet was not registered (possibly already registered?)
+2019-09-27 17:41:31.266 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'metricsFilter' to: [/*]
+2019-09-27 17:41:31.266 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-27 17:41:31.267 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-27 17:41:31.267 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-27 17:41:31.267 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-27 17:41:31.267 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-09-27 17:41:31.267 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webStatFilter' to urls: [/*]
+2019-09-27 17:41:31.267 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Filter webStatFilter was not registered (possibly already registered?)
+2019-09-27 17:41:31.267 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-09-27 17:41:32.155 [main] INFO  c.alibaba.druid.pool.DruidDataSource -{dataSource-1} inited
+2019-09-27 17:41:32.769 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.index()
+2019-09-27 17:41:32.770 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/login],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.login()
+2019-09-27 17:41:32.770 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/person],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.person()
+2019-09-27 17:41:32.770 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/province],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province()
+2019-09-27 17:41:32.772 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/city/{code}],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province(java.lang.String)
+2019-09-27 17:41:32.773 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/person/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.PersonController.index()
+2019-09-27 17:41:32.774 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/person/list],methods=[GET]}" onto public com.sykean.common.PageRes com.sykean.controller.PersonController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2019-09-27 17:41:32.774 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/person/save],methods=[POST]}" onto public boolean com.sykean.controller.PersonController.save(com.sykean.entity.Person)
+2019-09-27 17:41:32.775 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.UserController.index()
+2019-09-27 17:41:32.775 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/login],methods=[POST]}" onto public boolean com.sykean.controller.UserController.login(com.sykean.req.UserReq)
+2019-09-27 17:41:32.775 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/checkUsername],methods=[GET]}" onto public boolean com.sykean.controller.UserController.checkUsername(java.lang.String)
+2019-09-27 17:41:32.776 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-09-27 17:41:32.778 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-27 17:41:32.779 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-27 17:41:32.779 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-27 17:41:32.781 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-27 17:41:32.782 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-27 17:41:33.003 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-09-27 17:41:33.003 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-27 17:41:33.004 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-09-27 17:41:33.005 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-27 17:41:33.005 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2019-09-27 17:41:33.006 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-27 17:41:33.007 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-27 17:41:33.008 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2019-09-27 17:41:33.009 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2019-09-27 17:41:33.009 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-27 17:41:33.009 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-27 17:41:33.010 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-09-27 17:41:33.010 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-27 17:41:33.011 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-27 17:41:33.011 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2019-09-27 17:41:33.012 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-27 17:41:33.012 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-27 17:41:33.308 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29d89d5d: startup date [Fri Sep 27 17:41:29 CST 2019]; root of context hierarchy
+2019-09-27 17:41:33.352 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-27 17:41:33.352 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-27 17:41:33.385 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-27 17:41:33.903 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2019-09-27 17:41:33.904 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-27 17:41:33.905 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Bean with name 'statFilter' has been autodetected for JMX exposure
+2019-09-27 17:41:33.910 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-09-27 17:41:33.911 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2019-09-27 17:41:33.916 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 0
+2019-09-27 17:41:33.960 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2019-09-27 17:41:33.960 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Context refreshed
+2019-09-27 17:41:33.977 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Found 1 custom documentation plugin(s)
+2019-09-27 17:41:33.988 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -Scanning for api listing references
+2019-09-27 17:41:34.081 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: provinceUsingGET_1
+2019-09-27 17:41:34.096 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_1
+2019-09-27 17:41:34.113 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_2
+2019-09-27 17:41:34.178 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2019-09-27 17:41:34.182 [main] INFO  com.sykean.SykeanWebApplication -Started SykeanWebApplication in 5.543 seconds (JVM running for 7.041)
+2019-09-27 17:41:38.717 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-27 17:41:38.718 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-27 17:41:38.743 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2019-09-27 17:41:38.800 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: jZRreOlh
+2019-09-27 17:41:38.803 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 2 ms, random: jZRreOlh, return data:person
+2019-09-27 17:41:39.644 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: 1jGFMP7D
+2019-09-27 17:41:39.644 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: 1jGFMP7D, return data:person
+2019-09-27 17:41:40.838 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: HvCirK2g
+2019-09-27 17:41:40.899 [http-nio-8080-exec-5] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:41:40.915 [http-nio-8080-exec-5] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:41:40.927 [http-nio-8080-exec-5] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:41:40.929 [http-nio-8080-exec-5] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:41:40.930 [http-nio-8080-exec-5] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:41:40.933 [http-nio-8080-exec-5] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 3
+2019-09-27 17:41:40.934 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 96 ms, random: HvCirK2g, return data:PageRes{count=3, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=3, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:41:45.943 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: TDPWI0db
+2019-09-27 17:41:45.945 [http-nio-8080-exec-9] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:41:45.946 [http-nio-8080-exec-9] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:41:45.947 [http-nio-8080-exec-9] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:41:45.948 [http-nio-8080-exec-9] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:41:45.949 [http-nio-8080-exec-9] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:41:45.951 [http-nio-8080-exec-9] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 3
+2019-09-27 17:41:45.951 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 7 ms, random: TDPWI0db, return data:PageRes{count=3, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=3, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:41:45.963 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/save, params:[Person(id=null, name=zz, workerSn=aaa, duty=null, workKind=null, sex=0, regisiter=null)], ip:, random: nFzFK5Ij
+2019-09-27 17:41:45.966 [http-nio-8080-exec-8] DEBUG c.sykean.mapper.PersonMapper.insert -==>  Preparing: INSERT INTO person ( id, `name`, worker_sn, sex ) VALUES ( ?, ?, ?, ? ) 
+2019-09-27 17:41:45.968 [http-nio-8080-exec-8] DEBUG c.sykean.mapper.PersonMapper.insert -==> Parameters: null, zz(String), aaa(String), 0(Integer)
+2019-09-27 17:41:45.971 [http-nio-8080-exec-8] DEBUG c.sykean.mapper.PersonMapper.insert -<==    Updates: 1
+2019-09-27 17:41:45.972 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/save，runtime: 9 ms, random: nFzFK5Ij, return data:true
+2019-09-27 17:41:50.167 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: lM0Zdl3E
+2019-09-27 17:41:50.169 [http-nio-8080-exec-10] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:41:50.170 [http-nio-8080-exec-10] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:41:50.171 [http-nio-8080-exec-10] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:41:50.173 [http-nio-8080-exec-10] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:41:50.174 [http-nio-8080-exec-10] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:41:50.176 [http-nio-8080-exec-10] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 4
+2019-09-27 17:41:50.177 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 9 ms, random: lM0Zdl3E, return data:PageRes{count=4, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=4, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:44:32.979 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: W0hcoILk
+2019-09-27 17:44:32.979 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: W0hcoILk, return data:person
+2019-09-27 17:44:38.415 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/save, params:[Person(id=null, name=sds, workerSn=sas, duty=null, workKind=null, sex=0, regisiter=null)], ip:, random: D54H9sGB
+2019-09-27 17:44:38.415 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: LOMVLWXb
+2019-09-27 17:44:38.418 [http-nio-8080-exec-6] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:44:38.418 [http-nio-8080-exec-5] DEBUG c.sykean.mapper.PersonMapper.insert -==>  Preparing: INSERT INTO person ( id, `name`, worker_sn, sex ) VALUES ( ?, ?, ?, ? ) 
+2019-09-27 17:44:38.418 [http-nio-8080-exec-6] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:44:38.419 [http-nio-8080-exec-5] DEBUG c.sykean.mapper.PersonMapper.insert -==> Parameters: null, sds(String), sas(String), 0(Integer)
+2019-09-27 17:44:38.424 [http-nio-8080-exec-5] DEBUG c.sykean.mapper.PersonMapper.insert -<==    Updates: 1
+2019-09-27 17:44:38.424 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/save，runtime: 8 ms, random: D54H9sGB, return data:true
+2019-09-27 17:44:38.431 [http-nio-8080-exec-6] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:44:38.432 [http-nio-8080-exec-6] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:44:38.432 [http-nio-8080-exec-6] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:44:38.435 [http-nio-8080-exec-6] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 5
+2019-09-27 17:44:38.435 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 19 ms, random: LOMVLWXb, return data:PageRes{count=5, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=5, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:44:59.200 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/save, params:[Person(id=null, name=zhangsan, workerSn=1000, duty=null, workKind=null, sex=0, regisiter=null)], ip:, random: 3Wt67l6y
+2019-09-27 17:44:59.200 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: n01Di4B4
+2019-09-27 17:44:59.201 [http-nio-8080-exec-8] DEBUG c.sykean.mapper.PersonMapper.insert -==>  Preparing: INSERT INTO person ( id, `name`, worker_sn, sex ) VALUES ( ?, ?, ?, ? ) 
+2019-09-27 17:44:59.202 [http-nio-8080-exec-8] DEBUG c.sykean.mapper.PersonMapper.insert -==> Parameters: null, zhangsan(String), 1000(String), 0(Integer)
+2019-09-27 17:44:59.202 [http-nio-8080-exec-10] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:44:59.205 [http-nio-8080-exec-10] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:44:59.207 [http-nio-8080-exec-8] DEBUG c.sykean.mapper.PersonMapper.insert -<==    Updates: 1
+2019-09-27 17:44:59.207 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/save，runtime: 6 ms, random: 3Wt67l6y, return data:true
+2019-09-27 17:44:59.209 [http-nio-8080-exec-10] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:44:59.210 [http-nio-8080-exec-10] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:44:59.210 [http-nio-8080-exec-10] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:44:59.215 [http-nio-8080-exec-10] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 6
+2019-09-27 17:44:59.216 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 15 ms, random: n01Di4B4, return data:PageRes{count=6, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=6, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:45:04.520 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: spIa8c3Q
+2019-09-27 17:45:04.520 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/save, params:[Person(id=null, name=lisi, workerSn=1000, duty=null, workKind=null, sex=0, regisiter=null)], ip:, random: N01FuLIw
+2019-09-27 17:45:04.522 [http-nio-8080-exec-3] DEBUG c.sykean.mapper.PersonMapper.insert -==>  Preparing: INSERT INTO person ( id, `name`, worker_sn, sex ) VALUES ( ?, ?, ?, ? ) 
+2019-09-27 17:45:04.522 [http-nio-8080-exec-4] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:45:04.524 [http-nio-8080-exec-4] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:45:04.524 [http-nio-8080-exec-3] DEBUG c.sykean.mapper.PersonMapper.insert -==> Parameters: null, lisi(String), 1000(String), 0(Integer)
+2019-09-27 17:45:04.526 [http-nio-8080-exec-4] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:45:04.527 [http-nio-8080-exec-4] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:45:04.528 [http-nio-8080-exec-4] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:45:04.528 [http-nio-8080-exec-3] DEBUG c.sykean.mapper.PersonMapper.insert -<==    Updates: 1
+2019-09-27 17:45:04.528 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/save，runtime: 6 ms, random: N01FuLIw, return data:true
+2019-09-27 17:45:04.530 [http-nio-8080-exec-4] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 7
+2019-09-27 17:45:04.530 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 9 ms, random: spIa8c3Q, return data:PageRes{count=6, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=6, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:45:34.374 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: SJL13Pxr
+2019-09-27 17:45:34.375 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: SJL13Pxr, return data:person
+2019-09-27 17:45:42.236 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: atq5CmGa
+2019-09-27 17:45:42.236 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/save, params:[Person(id=null, name=zhangkeke, workerSn=2000, duty=null, workKind=null, sex=0, regisiter=null)], ip:, random: Vso1V9a5
+2019-09-27 17:45:42.237 [http-nio-8080-exec-10] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:45:42.237 [http-nio-8080-exec-10] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:45:42.238 [http-nio-8080-exec-8] DEBUG c.sykean.mapper.PersonMapper.insert -==>  Preparing: INSERT INTO person ( id, `name`, worker_sn, sex ) VALUES ( ?, ?, ?, ? ) 
+2019-09-27 17:45:42.239 [http-nio-8080-exec-8] DEBUG c.sykean.mapper.PersonMapper.insert -==> Parameters: null, zhangkeke(String), 2000(String), 0(Integer)
+2019-09-27 17:45:42.239 [http-nio-8080-exec-10] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:45:42.240 [http-nio-8080-exec-10] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:45:42.240 [http-nio-8080-exec-10] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:45:42.241 [http-nio-8080-exec-8] DEBUG c.sykean.mapper.PersonMapper.insert -<==    Updates: 1
+2019-09-27 17:45:42.241 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/save，runtime: 4 ms, random: Vso1V9a5, return data:true
+2019-09-27 17:45:42.242 [http-nio-8080-exec-10] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 8
+2019-09-27 17:45:42.244 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 7 ms, random: atq5CmGa, return data:PageRes{count=7, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=7, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:45:54.316 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/save, params:[Person(id=null, name=lili, workerSn=2001, duty=null, workKind=null, sex=0, regisiter=null)], ip:, random: Q3ylB7Tq
+2019-09-27 17:45:54.316 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: KHDkBOXL
+2019-09-27 17:45:54.317 [http-nio-8080-exec-4] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:45:54.317 [http-nio-8080-exec-3] DEBUG c.sykean.mapper.PersonMapper.insert -==>  Preparing: INSERT INTO person ( id, `name`, worker_sn, sex ) VALUES ( ?, ?, ?, ? ) 
+2019-09-27 17:45:54.318 [http-nio-8080-exec-4] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:45:54.318 [http-nio-8080-exec-3] DEBUG c.sykean.mapper.PersonMapper.insert -==> Parameters: null, lili(String), 2001(String), 0(Integer)
+2019-09-27 17:45:54.319 [http-nio-8080-exec-4] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:45:54.321 [http-nio-8080-exec-3] DEBUG c.sykean.mapper.PersonMapper.insert -<==    Updates: 1
+2019-09-27 17:45:54.322 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/save，runtime: 5 ms, random: Q3ylB7Tq, return data:true
+2019-09-27 17:45:54.323 [http-nio-8080-exec-4] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:45:54.324 [http-nio-8080-exec-4] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:45:54.328 [http-nio-8080-exec-4] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 9
+2019-09-27 17:45:54.329 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 12 ms, random: KHDkBOXL, return data:PageRes{count=8, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=8, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:45:57.964 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: QhuGUTya
+2019-09-27 17:45:57.964 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: QhuGUTya, return data:person
+2019-09-27 17:45:58.851 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: CS242EMB
+2019-09-27 17:45:58.851 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: CS242EMB, return data:person
+2019-09-27 17:46:10.778 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: 7mn6DBda
+2019-09-27 17:46:10.779 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: 7mn6DBda, return data:person
+2019-09-27 17:46:10.928 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: IT8hINd4
+2019-09-27 17:46:10.928 [http-nio-8080-exec-1] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:46:10.929 [http-nio-8080-exec-1] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:46:10.930 [http-nio-8080-exec-1] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:46:10.932 [http-nio-8080-exec-1] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:46:10.933 [http-nio-8080-exec-1] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:46:10.934 [http-nio-8080-exec-1] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 9
+2019-09-27 17:46:10.935 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 7 ms, random: IT8hINd4, return data:PageRes{count=9, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=9, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:46:44.196 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: qrYihpAE
+2019-09-27 17:46:44.197 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: qrYihpAE, return data:person
+2019-09-27 17:46:44.291 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: UPBPPnFG
+2019-09-27 17:46:44.293 [http-nio-8080-exec-7] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:46:44.294 [http-nio-8080-exec-7] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:46:44.295 [http-nio-8080-exec-7] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:46:44.296 [http-nio-8080-exec-7] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:46:44.296 [http-nio-8080-exec-7] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:46:44.298 [http-nio-8080-exec-7] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 9
+2019-09-27 17:46:44.300 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 8 ms, random: UPBPPnFG, return data:PageRes{count=9, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=9, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:46:44.802 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: b2xoCfoU
+2019-09-27 17:46:44.802 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: b2xoCfoU, return data:person
+2019-09-27 17:46:44.848 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: NAiKfhlp
+2019-09-27 17:46:44.850 [http-nio-8080-exec-8] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:46:44.852 [http-nio-8080-exec-8] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:46:44.853 [http-nio-8080-exec-8] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:46:44.854 [http-nio-8080-exec-8] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:46:44.854 [http-nio-8080-exec-8] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:46:44.855 [http-nio-8080-exec-8] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 9
+2019-09-27 17:46:44.856 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 8 ms, random: NAiKfhlp, return data:PageRes{count=9, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=9, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:47:18.411 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: yGxPhijJ
+2019-09-27 17:47:18.412 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: yGxPhijJ, return data:person
+2019-09-27 17:47:18.597 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: EyTfnMeC
+2019-09-27 17:47:18.597 [http-nio-8080-exec-6] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:47:18.598 [http-nio-8080-exec-6] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:47:18.603 [http-nio-8080-exec-6] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:47:18.608 [http-nio-8080-exec-6] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:47:18.608 [http-nio-8080-exec-6] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:47:18.613 [http-nio-8080-exec-6] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 9
+2019-09-27 17:47:18.614 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 17 ms, random: EyTfnMeC, return data:PageRes{count=9, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=9, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:47:19.259 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: 0WMYPHjy
+2019-09-27 17:47:19.259 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: 0WMYPHjy, return data:person
+2019-09-27 17:47:19.350 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: yZXZFW7z
+2019-09-27 17:47:19.351 [http-nio-8080-exec-7] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:47:19.351 [http-nio-8080-exec-7] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:47:19.351 [http-nio-8080-exec-7] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:47:19.353 [http-nio-8080-exec-7] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:47:19.354 [http-nio-8080-exec-7] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:47:19.359 [http-nio-8080-exec-7] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 9
+2019-09-27 17:47:19.359 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 9 ms, random: yZXZFW7z, return data:PageRes{count=9, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=9, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:47:46.438 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: G55vGWw8
+2019-09-27 17:47:46.439 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: G55vGWw8, return data:person
+2019-09-27 17:47:46.619 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: YZcERbnO
+2019-09-27 17:47:46.621 [http-nio-8080-exec-1] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:47:46.623 [http-nio-8080-exec-1] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:47:46.624 [http-nio-8080-exec-1] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:47:46.625 [http-nio-8080-exec-1] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:47:46.625 [http-nio-8080-exec-1] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:47:46.627 [http-nio-8080-exec-1] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 9
+2019-09-27 17:47:46.628 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 9 ms, random: YZcERbnO, return data:PageRes{count=9, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=9, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:47:55.000 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: 4PT0enN7
+2019-09-27 17:47:55.001 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: 4PT0enN7, return data:person
+2019-09-27 17:47:55.047 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: hDPU6Wb0
+2019-09-27 17:47:55.048 [http-nio-8080-exec-7] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:47:55.048 [http-nio-8080-exec-7] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:47:55.049 [http-nio-8080-exec-7] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:47:55.051 [http-nio-8080-exec-7] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:47:55.053 [http-nio-8080-exec-7] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:47:55.058 [http-nio-8080-exec-7] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 9
+2019-09-27 17:47:55.059 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 11 ms, random: hDPU6Wb0, return data:PageRes{count=9, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=9, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:47:55.701 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: DadlDLrz
+2019-09-27 17:47:55.701 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: DadlDLrz, return data:person
+2019-09-27 17:47:55.745 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: l1sBs6No
+2019-09-27 17:47:55.746 [http-nio-8080-exec-2] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:47:55.746 [http-nio-8080-exec-2] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:47:55.747 [http-nio-8080-exec-2] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:47:55.747 [http-nio-8080-exec-2] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:47:55.747 [http-nio-8080-exec-2] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:47:55.749 [http-nio-8080-exec-2] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 9
+2019-09-27 17:47:55.750 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 5 ms, random: l1sBs6No, return data:PageRes{count=9, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=9, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}
+2019-09-27 17:47:56.472 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/index, params:[], ip:, random: SKEBn5WC
+2019-09-27 17:47:56.472 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/index，runtime: 0 ms, random: SKEBn5WC, return data:person
+2019-09-27 17:47:56.515 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://localhost:8080/person/list, params:[1, 10, ], ip:, random: pXRKDU4w
+2019-09-27 17:47:56.516 [http-nio-8080-exec-4] DEBUG c.s.m.PersonMapper.selectList_COUNT -==>  Preparing: SELECT count(0) FROM person 
+2019-09-27 17:47:56.516 [http-nio-8080-exec-4] DEBUG c.s.m.PersonMapper.selectList_COUNT -==> Parameters: 
+2019-09-27 17:47:56.517 [http-nio-8080-exec-4] DEBUG c.s.m.PersonMapper.selectList_COUNT -<==      Total: 1
+2019-09-27 17:47:56.518 [http-nio-8080-exec-4] DEBUG c.s.mapper.PersonMapper.selectList -==>  Preparing: SELECT id AS id,`name`,worker_sn AS workerSn,duty,work_kind AS workKind,sex,regisiter FROM person limit ?,? 
+2019-09-27 17:47:56.518 [http-nio-8080-exec-4] DEBUG c.s.mapper.PersonMapper.selectList -==> Parameters: 0(Integer), 10(Integer)
+2019-09-27 17:47:56.525 [http-nio-8080-exec-4] DEBUG c.s.mapper.PersonMapper.selectList -<==      Total: 9
+2019-09-27 17:47:56.525 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://localhost:8080/person/list，runtime: 10 ms, random: pXRKDU4w, return data:PageRes{count=9, data=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=9, pages=1, countSignal=false, orderBy='null', orderByOnly=false, reasonable=false, pageSizeZero=false}}

@@ -53,6 +53,8 @@
 
         })*/
         $(function(){
+            //页面首次加载调用展示人员信息接口
+            queryData();
             $("#save").click(function(){
                 let shift_val=[];
                 //获取人员排班复选框中的值
@@ -95,16 +97,18 @@
                     }),
                     success:function(data){
                         if(data){
-                            alert("人员新增成功")
+                            console.log("人员新增成功");
                         }else{
-                            alert("人员新增失败")
+                            console.log("人员新增失败");
                         }
                     }
 
                 })
                 //新增完成显示表格中
-                $.get("/person/list",function(data){
-                    $.each(data,function(index,item){
+
+                queryData();
+                /*$.get("/person/list",function(res){
+                    $.each(res.data,function(index,item){
                         $("<tr></tr>").append("<td>"+item.id+"</td>")
                                       .append("<td>"+item.uname+"</td>")
                                       .append("<td>"+item.uwork_num+"</td>")
@@ -115,10 +119,10 @@
                                       .appendTo($("tbody"))
 
                     })
-                })
+                })*/
 
             })
-            //查询
+            //查询结果展示
             $("#searchbtn").click(function () {
                 $("tbody tr").empty();
                 var searchStr=$("#search").val();
@@ -142,7 +146,28 @@
                 })
             })
 
+            function queryData(){
+                    $("tbody tr").empty();
+                    var searchStr=$("#search").val();
+                    $.get("/person/list",{"name":searchStr},function(res){
+                        if(res.data.length===0){
+                            $("<tr></tr>").apppend("<td colspan='7'>暂无数据</td>")
+                                .appendTo($("tbody"));
 
+                        }
+                        $.each(res.data,function(index,item){
+                            $("<tr></tr>").append("<td>"+item.id+"</td>")
+                                .append("<td>"+item.name+"</td>")
+                                .append("<td>"+item.workerSn+"</td>")
+                                .append("<td>"+item.duty+"</td>")
+                                .append("<td>"+item.sex+"</td>")
+                                .append("<td>"+item.workerSn+"</td>")
+                                .append("<td>"+item.regisiter+"</td>")
+                                .append("<td>暂无</td>")
+                                .appendTo($("tbody"))
+                        })
+                    })
+            }
 
 
 
