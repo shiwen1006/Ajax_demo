@@ -9,10 +9,7 @@ import com.sykean.mapper.PersonMapper;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -38,5 +35,16 @@ public class PersonController {
                         .like(StringUtils.isNotBlank(name), "name", name)
         );
         return PageRes.builder().data(persons).count((int) (new PageInfo<>(persons).getTotal())).build();
+    }
+
+    @PostMapping("save")
+    @ResponseBody
+    public boolean save(@RequestBody Person perosn){
+        try {
+            personMapper.insert(perosn);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

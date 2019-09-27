@@ -1,0 +1,321 @@
+2019-09-25 16:20:48.810 [main] INFO  com.sykean.SykeanWebApplication -Starting SykeanWebApplication on shiwen-PC with PID 7428 (I:\ven_git\Ajax_demo\wen-web\target\classes started by shiwen in I:\ven_git\Ajax_demo)
+2019-09-25 16:20:48.816 [main] INFO  com.sykean.SykeanWebApplication -No active profile set, falling back to default profiles: default
+2019-09-25 16:20:49.004 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29d89d5d: startup date [Wed Sep 25 16:20:49 CST 2019]; root of context hierarchy
+2019-09-25 16:20:49.837 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory -Overriding bean definition for bean 'statFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=druidConfig; factoryMethodName=statFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/sykean/config/DruidConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration; factoryMethodName=statFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/stat/DruidFilterConfiguration.class]]
+2019-09-25 16:20:50.292 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$669226a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-25 16:20:50.807 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2019-09-25 16:20:50.817 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-09-25 16:20:50.819 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-09-25 16:20:51.002 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-09-25 16:20:51.002 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1998 ms
+2019-09-25 16:20:51.439 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-09-25 16:20:51.440 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2019-09-25 16:20:51.441 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-09-25 16:20:51.442 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Servlet statViewServlet was not registered (possibly already registered?)
+2019-09-25 16:20:51.445 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'metricsFilter' to: [/*]
+2019-09-25 16:20:51.445 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-25 16:20:51.446 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-25 16:20:51.446 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-25 16:20:51.446 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-25 16:20:51.446 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-09-25 16:20:51.447 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webStatFilter' to urls: [/*]
+2019-09-25 16:20:51.447 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Filter webStatFilter was not registered (possibly already registered?)
+2019-09-25 16:20:51.447 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-09-25 16:20:52.449 [main] INFO  c.alibaba.druid.pool.DruidDataSource -{dataSource-1} inited
+2019-09-25 16:20:53.120 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.index()
+2019-09-25 16:20:53.121 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/login],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.login()
+2019-09-25 16:20:53.121 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/person],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.person()
+2019-09-25 16:20:53.121 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/province],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province()
+2019-09-25 16:20:53.123 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/city/{code}],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province(java.lang.String)
+2019-09-25 16:20:53.124 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/person/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.PersonController.index()
+2019-09-25 16:20:53.124 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/person/list],methods=[GET]}" onto public com.sykean.common.PageRes com.sykean.controller.PersonController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2019-09-25 16:20:53.126 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.UserController.index()
+2019-09-25 16:20:53.127 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/login],methods=[POST]}" onto public boolean com.sykean.controller.UserController.login(com.sykean.req.UserReq)
+2019-09-25 16:20:53.127 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/checkUsername],methods=[GET]}" onto public boolean com.sykean.controller.UserController.checkUsername(java.lang.String)
+2019-09-25 16:20:53.128 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-09-25 16:20:53.130 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-25 16:20:53.131 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-25 16:20:53.131 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-25 16:20:53.133 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-25 16:20:53.134 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-25 16:20:53.381 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:20:53.382 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:20:53.383 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-09-25 16:20:53.384 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:20:53.384 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:20:53.385 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-09-25 16:20:53.385 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2019-09-25 16:20:53.386 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:20:53.387 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:20:53.388 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:20:53.388 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2019-09-25 16:20:53.390 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2019-09-25 16:20:53.390 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2019-09-25 16:20:53.391 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:20:53.391 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:20:53.392 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-09-25 16:20:53.392 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:20:53.732 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29d89d5d: startup date [Wed Sep 25 16:20:49 CST 2019]; root of context hierarchy
+2019-09-25 16:20:53.794 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-25 16:20:53.795 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-25 16:20:53.837 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-25 16:20:54.404 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2019-09-25 16:20:54.406 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-25 16:20:54.406 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Bean with name 'statFilter' has been autodetected for JMX exposure
+2019-09-25 16:20:54.413 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-09-25 16:20:54.415 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2019-09-25 16:20:54.419 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 0
+2019-09-25 16:20:54.460 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2019-09-25 16:20:54.460 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Context refreshed
+2019-09-25 16:20:54.479 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Found 1 custom documentation plugin(s)
+2019-09-25 16:20:54.490 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -Scanning for api listing references
+2019-09-25 16:20:54.581 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: provinceUsingGET_1
+2019-09-25 16:20:54.597 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_1
+2019-09-25 16:20:54.611 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_2
+2019-09-25 16:20:54.659 [main] ERROR o.a.coyote.http11.Http11NioProtocol -Failed to start end point associated with ProtocolHandler ["http-nio-8080"]
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.sykean.SykeanWebApplication.main(SykeanWebApplication.java:9)
+2019-09-25 16:20:54.665 [main] ERROR o.a.catalina.core.StandardService -Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.sykean.SykeanWebApplication.main(SykeanWebApplication.java:9)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
+	... 14 common frames omitted
+2019-09-25 16:20:54.673 [main] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+2019-09-25 16:20:54.682 [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer -
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-09-25 16:20:54.686 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-09-25 16:20:54.687 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29d89d5d: startup date [Wed Sep 25 16:20:49 CST 2019]; root of context hierarchy
+2019-09-25 16:20:54.691 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Stopping beans in phase 2147483647
+2019-09-25 16:20:54.692 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Stopping beans in phase 0
+2019-09-25 16:20:54.693 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Unregistering JMX-exposed beans on shutdown
+2019-09-25 16:20:54.693 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Unregistering JMX-exposed beans
+2019-09-25 16:20:54.699 [main] INFO  c.alibaba.druid.pool.DruidDataSource -{dataSource-1} closed
+2019-09-25 16:22:17.392 [main] INFO  com.sykean.SykeanWebApplication -Starting SykeanWebApplication on shiwen-PC with PID 12124 (I:\ven_git\Ajax_demo\wen-web\target\classes started by shiwen in I:\ven_git\Ajax_demo)
+2019-09-25 16:22:17.394 [main] INFO  com.sykean.SykeanWebApplication -No active profile set, falling back to default profiles: default
+2019-09-25 16:22:17.556 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@212b5695: startup date [Wed Sep 25 16:22:17 CST 2019]; root of context hierarchy
+2019-09-25 16:22:18.289 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory -Overriding bean definition for bean 'statFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=druidConfig; factoryMethodName=statFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/sykean/config/DruidConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration; factoryMethodName=statFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/stat/DruidFilterConfiguration.class]]
+2019-09-25 16:22:18.713 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bd63b1fd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-25 16:22:19.077 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2019-09-25 16:22:19.085 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-09-25 16:22:19.086 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-09-25 16:22:19.225 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-09-25 16:22:19.225 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1669 ms
+2019-09-25 16:22:19.544 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-09-25 16:22:19.545 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2019-09-25 16:22:19.546 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-09-25 16:22:19.547 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Servlet statViewServlet was not registered (possibly already registered?)
+2019-09-25 16:22:19.549 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'metricsFilter' to: [/*]
+2019-09-25 16:22:19.549 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-25 16:22:19.550 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-25 16:22:19.550 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-25 16:22:19.550 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-25 16:22:19.550 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-09-25 16:22:19.550 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webStatFilter' to urls: [/*]
+2019-09-25 16:22:19.551 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Filter webStatFilter was not registered (possibly already registered?)
+2019-09-25 16:22:19.551 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-09-25 16:22:20.730 [main] INFO  c.alibaba.druid.pool.DruidDataSource -{dataSource-1} inited
+2019-09-25 16:22:21.570 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.index()
+2019-09-25 16:22:21.571 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/login],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.login()
+2019-09-25 16:22:21.572 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/person],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.person()
+2019-09-25 16:22:21.573 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/province],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province()
+2019-09-25 16:22:21.574 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/city/{code}],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province(java.lang.String)
+2019-09-25 16:22:21.575 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/person/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.PersonController.index()
+2019-09-25 16:22:21.576 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/person/list],methods=[GET]}" onto public com.sykean.common.PageRes com.sykean.controller.PersonController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2019-09-25 16:22:21.577 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.UserController.index()
+2019-09-25 16:22:21.578 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/login],methods=[POST]}" onto public boolean com.sykean.controller.UserController.login(com.sykean.req.UserReq)
+2019-09-25 16:22:21.579 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/checkUsername],methods=[GET]}" onto public boolean com.sykean.controller.UserController.checkUsername(java.lang.String)
+2019-09-25 16:22:21.579 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-09-25 16:22:21.581 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-25 16:22:21.582 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-25 16:22:21.583 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-25 16:22:21.585 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-25 16:22:21.585 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-25 16:22:21.807 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:22:21.808 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:22:21.808 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-09-25 16:22:21.809 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:22:21.810 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2019-09-25 16:22:21.811 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-09-25 16:22:21.811 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:22:21.812 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2019-09-25 16:22:21.814 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-09-25 16:22:21.814 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:22:21.816 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:22:21.817 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:22:21.818 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2019-09-25 16:22:21.818 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2019-09-25 16:22:21.819 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:22:21.819 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:22:21.820 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:22:22.278 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@212b5695: startup date [Wed Sep 25 16:22:17 CST 2019]; root of context hierarchy
+2019-09-25 16:22:22.339 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-25 16:22:22.339 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-25 16:22:22.385 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-25 16:22:22.946 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2019-09-25 16:22:22.948 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-25 16:22:22.948 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Bean with name 'statFilter' has been autodetected for JMX exposure
+2019-09-25 16:22:22.955 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-09-25 16:22:22.956 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2019-09-25 16:22:22.961 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 0
+2019-09-25 16:22:23.001 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2019-09-25 16:22:23.002 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Context refreshed
+2019-09-25 16:22:23.013 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Found 1 custom documentation plugin(s)
+2019-09-25 16:22:23.024 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -Scanning for api listing references
+2019-09-25 16:22:23.110 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: provinceUsingGET_1
+2019-09-25 16:22:23.123 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_1
+2019-09-25 16:22:23.136 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_2
+2019-09-25 16:22:23.215 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2019-09-25 16:22:23.221 [main] INFO  com.sykean.SykeanWebApplication -Started SykeanWebApplication in 6.188 seconds (JVM running for 7.134)
+2019-09-25 16:22:31.089 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-25 16:22:31.090 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-25 16:22:31.123 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2019-09-25 16:22:31.218 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: GnpTINGv
+2019-09-25 16:22:31.222 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 3 ms, random: GnpTINGv, return data:person
+2019-09-25 16:24:19.458 [main] INFO  com.sykean.SykeanWebApplication -Starting SykeanWebApplication on shiwen-PC with PID 11152 (I:\ven_git\Ajax_demo\wen-web\target\classes started by shiwen in I:\ven_git\Ajax_demo)
+2019-09-25 16:24:19.460 [main] INFO  com.sykean.SykeanWebApplication -No active profile set, falling back to default profiles: default
+2019-09-25 16:24:19.607 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3514a4c0: startup date [Wed Sep 25 16:24:19 CST 2019]; root of context hierarchy
+2019-09-25 16:24:20.434 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory -Overriding bean definition for bean 'statFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=druidConfig; factoryMethodName=statFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/sykean/config/DruidConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration; factoryMethodName=statFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/stat/DruidFilterConfiguration.class]]
+2019-09-25 16:24:20.988 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5f013ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-25 16:24:21.490 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2019-09-25 16:24:21.512 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-09-25 16:24:21.514 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-09-25 16:24:21.685 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-09-25 16:24:21.687 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 2080 ms
+2019-09-25 16:24:22.229 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-09-25 16:24:22.231 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2019-09-25 16:24:22.232 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-09-25 16:24:22.232 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Servlet statViewServlet was not registered (possibly already registered?)
+2019-09-25 16:24:22.234 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'metricsFilter' to: [/*]
+2019-09-25 16:24:22.235 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-25 16:24:22.236 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-25 16:24:22.236 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-25 16:24:22.236 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-25 16:24:22.236 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-09-25 16:24:22.236 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webStatFilter' to urls: [/*]
+2019-09-25 16:24:22.236 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Filter webStatFilter was not registered (possibly already registered?)
+2019-09-25 16:24:22.236 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-09-25 16:24:23.251 [main] INFO  c.alibaba.druid.pool.DruidDataSource -{dataSource-1} inited
+2019-09-25 16:24:23.928 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.index()
+2019-09-25 16:24:23.929 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/login],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.login()
+2019-09-25 16:24:23.929 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/person],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.person()
+2019-09-25 16:24:23.930 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/province],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province()
+2019-09-25 16:24:23.931 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/city/{code}],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province(java.lang.String)
+2019-09-25 16:24:23.932 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/person/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.PersonController.index()
+2019-09-25 16:24:23.932 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/person/list],methods=[GET]}" onto public com.sykean.common.PageRes com.sykean.controller.PersonController.list(java.lang.Integer,java.lang.Integer,java.lang.String)
+2019-09-25 16:24:23.933 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.UserController.index()
+2019-09-25 16:24:23.935 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/login],methods=[POST]}" onto public boolean com.sykean.controller.UserController.login(com.sykean.req.UserReq)
+2019-09-25 16:24:23.935 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/checkUsername],methods=[GET]}" onto public boolean com.sykean.controller.UserController.checkUsername(java.lang.String)
+2019-09-25 16:24:23.935 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-09-25 16:24:23.938 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-25 16:24:23.939 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-25 16:24:23.939 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-25 16:24:23.944 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-25 16:24:23.944 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-25 16:24:24.219 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-09-25 16:24:24.219 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:24:24.220 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:24:24.220 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-09-25 16:24:24.221 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:24:24.222 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-09-25 16:24:24.222 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:24:24.223 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:24:24.225 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2019-09-25 16:24:24.226 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:24:24.227 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:24:24.227 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:24:24.228 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2019-09-25 16:24:24.229 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2019-09-25 16:24:24.229 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:24:24.229 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2019-09-25 16:24:24.230 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-25 16:24:24.518 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3514a4c0: startup date [Wed Sep 25 16:24:19 CST 2019]; root of context hierarchy
+2019-09-25 16:24:24.562 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-25 16:24:24.562 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-25 16:24:24.597 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-25 16:24:25.185 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2019-09-25 16:24:25.187 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-09-25 16:24:25.187 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Bean with name 'statFilter' has been autodetected for JMX exposure
+2019-09-25 16:24:25.196 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-09-25 16:24:25.197 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2019-09-25 16:24:25.202 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 0
+2019-09-25 16:24:25.248 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2019-09-25 16:24:25.248 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Context refreshed
+2019-09-25 16:24:25.265 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Found 1 custom documentation plugin(s)
+2019-09-25 16:24:25.279 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -Scanning for api listing references
+2019-09-25 16:24:25.382 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: provinceUsingGET_1
+2019-09-25 16:24:25.399 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_1
+2019-09-25 16:24:25.417 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_2
+2019-09-25 16:24:25.498 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2019-09-25 16:24:25.504 [main] INFO  com.sykean.SykeanWebApplication -Started SykeanWebApplication in 6.413 seconds (JVM running for 7.631)
+2019-09-25 16:32:03.585 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-25 16:32:03.586 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-25 16:32:03.607 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2019-09-25 16:32:03.634 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: b7C8bhsY
+2019-09-25 16:32:03.637 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 2 ms, random: b7C8bhsY, return data:person
+2019-09-25 16:32:10.759 [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound -Request method 'POST' not supported
+2019-09-25 16:32:10.765 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: GKjrkSUT
+2019-09-25 16:32:10.765 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: GKjrkSUT, return data:person
+2019-09-25 16:36:07.099 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: gg9Gkwg5
+2019-09-25 16:36:07.099 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: gg9Gkwg5, return data:person

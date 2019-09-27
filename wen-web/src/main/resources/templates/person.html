@@ -79,22 +79,22 @@
                     })
                 })
 
-                $.Ajax({
+                $.ajax({
                     type:"post",
-                    url:"",
+                    url:"/person/save",
                     dataType:"json",
                     contentType : "application/json;charset=utf-8",
                     data:JSON.stringify({
-                        "uname":$("#uname").val(),
-                        "uwork_num":$("#uwork_num").val(),
-                        "uduty":$("#uduty").find("option :selected").val(),
-                        "uwork_kind":$("#uwork_kind").find("option :selected").text(),
+                        "name":$("#uname").val(),
+                        "workerSn":$("#uwork_num").val(),
+                        "duty":$("#uduty").find("option :selected").val(),
+                        "workkind":$("#uwork_kind").find("option :selected").text(),
                         "sex":$('input[type=radio][name=sex]:checked').val(),
                         "shift":JSON.stringify(shift_val),
-                        "regist":$('input[type=radio][name=regist]:checked').val()
+                        "regisiter":$('input[type=radio][name=regist]:checked').val()
                     }),
                     success:function(data){
-                        if(data==="true"){
+                        if(data){
                             alert("人员新增成功")
                         }else{
                             alert("人员新增失败")
@@ -103,7 +103,7 @@
 
                 })
                 //新增完成显示表格中
-                $.get("",function(data){
+                $.get("/person/list",function(data){
                     $.each(data,function(index,item){
                         $("<tr></tr>").append("<td>"+item.id+"</td>")
                                       .append("<td>"+item.uname+"</td>")
@@ -119,22 +119,24 @@
 
             })
             //查询
-            $("#search").click(function () {
+            $("#searchbtn").click(function () {
+                $("tbody tr").empty();
                 var searchStr=$("#search").val();
                 //console.log(searchStr)
-                $.get("",{"searchStr":searchStr},function(data){
-                    if(data.length===0){
-                        $("<tr></tr>").apppend("<td colspan='7'>"+暂无数据+"</td>")
+                $.get("/person/list",{"name":searchStr},function(res){
+                    //alert(data);
+                    if(res.data.length===0){
+                        $("<tr></tr>").apppend("<td colspan='7'>暂无数据</td>")
                                       .appendTo($("tbody"));
+
                     }
-                    $.each(data,function(index,item){
+                    $.each(res.data,function(index,item){
                         $("<tr></tr>").append("<td>"+item.id+"</td>")
-                            .append("<td>"+item.uname+"</td>")
-                            .append("<td>"+item.uwork_num+"</td>")
-                            .append("<td>"+item.uduty+"</td>")
-                            .append("<td>"+item.uwork_kind+"</td>")
-                            .append("<td>"+item.shift+"</td>")
-                            .append("<td>"+item.regist+"</td>")
+                            .append("<td>"+item.name+"</td>")
+                            .append("<td>"+item.workerSn+"</td>")
+                            .append("<td>"+item.duty+"</td>")
+                            .append("<td>"+item.sex+"</td>")
+                            .append("<td>"+item.regisiter+"</td>")
                             .appendTo($("tbody"))
                     })
                 })
@@ -239,7 +241,7 @@
 
                 <div class="form-group">
                     <button type="button" class="btn btn-success col-xs-2 col-xs-offset-1" id="save">保存</button>
-                    <button type="button" class="btn btn-success col-xs-2 col-xs-offset-1" id="reset">重置</button>
+                    <button type="reset" class="btn btn-success col-xs-2 col-xs-offset-1" id="reset">重置</button>
                 </div>
 
             </form>
@@ -249,8 +251,8 @@
                 <div class="col-xs-12">
                     <input type="button" class="btn  btn-default" value="新增"></input>
                     <div class="search" style="float:right">
-                        <input type="text">
-                        <input type="button" id="search" class="btn  btn-default" value="查询"></input>
+                        <input type="text" id="search">
+                        <input type="button" class="btn  btn-default" value="查询" id="searchbtn"></input>
                     </div>
                 </div>
             </div>
@@ -268,7 +270,7 @@
                         <td>详情</td>
                     </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody id="data"></tbody>
                 </table>
             </div>
 

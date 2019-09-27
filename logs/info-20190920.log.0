@@ -1,0 +1,893 @@
+2019-09-20 13:40:02.643 [main] INFO  com.sykean.SykeanWebApplication -Starting SykeanWebApplication on shiwen-PC with PID 14004 (I:\ven_git\Ajax_demo\wen-web\target\classes started by shiwen in I:\ven_git\Ajax_demo)
+2019-09-20 13:40:02.650 [main] INFO  com.sykean.SykeanWebApplication -The following profiles are active: dev
+2019-09-20 13:40:02.909 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@140c9f39: startup date [Fri Sep 20 13:40:02 CST 2019]; root of context hierarchy
+2019-09-20 13:40:04.392 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2019-09-20 13:40:04.400 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-09-20 13:40:04.401 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-09-20 13:40:04.501 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-09-20 13:40:04.502 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1593 ms
+2019-09-20 13:40:04.727 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2019-09-20 13:40:04.730 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'metricsFilter' to: [/*]
+2019-09-20 13:40:04.731 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-20 13:40:04.731 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-20 13:40:04.732 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-20 13:40:04.732 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-20 13:40:04.732 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-09-20 13:40:04.732 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-09-20 13:40:05.174 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.index()
+2019-09-20 13:40:05.175 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/person],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.person()
+2019-09-20 13:40:05.175 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/province],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province()
+2019-09-20 13:40:05.177 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/city/{code}],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province(java.lang.String)
+2019-09-20 13:40:05.178 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.UserController.index()
+2019-09-20 13:40:05.178 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/checkUsername],methods=[GET]}" onto public boolean com.sykean.controller.UserController.checkUsername(java.lang.String)
+2019-09-20 13:40:05.179 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/login],methods=[POST]}" onto public boolean com.sykean.controller.UserController.login(com.sykean.req.UserReq)
+2019-09-20 13:40:05.179 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-09-20 13:40:05.182 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-20 13:40:05.183 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-20 13:40:05.183 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-20 13:40:05.185 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-20 13:40:05.185 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-20 13:40:05.332 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 13:40:05.333 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 13:40:05.333 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-09-20 13:40:05.334 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 13:40:05.335 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2019-09-20 13:40:05.335 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2019-09-20 13:40:05.336 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 13:40:05.337 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2019-09-20 13:40:05.337 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2019-09-20 13:40:05.337 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 13:40:05.338 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 13:40:05.339 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 13:40:05.339 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 13:40:05.340 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-09-20 13:40:05.340 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 13:40:05.341 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-09-20 13:40:05.341 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 13:40:05.623 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@140c9f39: startup date [Fri Sep 20 13:40:02 CST 2019]; root of context hierarchy
+2019-09-20 13:40:05.675 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-20 13:40:05.676 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-20 13:40:05.710 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-20 13:40:06.228 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2019-09-20 13:40:06.236 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 0
+2019-09-20 13:40:06.276 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2019-09-20 13:40:06.276 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Context refreshed
+2019-09-20 13:40:06.292 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Found 1 custom documentation plugin(s)
+2019-09-20 13:40:06.303 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -Scanning for api listing references
+2019-09-20 13:40:06.393 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: provinceUsingGET_1
+2019-09-20 13:40:06.409 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_1
+2019-09-20 13:40:06.471 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2019-09-20 13:40:06.477 [main] INFO  com.sykean.SykeanWebApplication -Started SykeanWebApplication in 4.156 seconds (JVM running for 6.874)
+2019-09-20 13:40:37.743 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-20 13:40:37.744 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-20 13:40:37.766 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2019-09-20 13:40:37.791 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: O3zsmKf1
+2019-09-20 13:40:37.795 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 2 ms, random: O3zsmKf1, return data:person
+2019-09-20 13:45:43.142 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: 9jjICZfF
+2019-09-20 13:45:43.142 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: 9jjICZfF, return data:person
+2019-09-20 13:47:19.655 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: dH1H2T8U
+2019-09-20 13:47:19.655 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: dH1H2T8U, return data:person
+2019-09-20 13:49:16.132 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: NPDJHXju
+2019-09-20 13:49:16.133 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: NPDJHXju, return data:person
+2019-09-20 13:50:00.137 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: m0siE9Ou
+2019-09-20 13:50:00.138 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: m0siE9Ou, return data:person
+2019-09-20 13:51:41.645 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: GpuY8b5f
+2019-09-20 13:51:41.646 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: GpuY8b5f, return data:person
+2019-09-20 13:52:02.427 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: 9xxl91dZ
+2019-09-20 13:52:02.428 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: 9xxl91dZ, return data:person
+2019-09-20 13:52:48.775 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: V4llRX1h
+2019-09-20 13:52:48.776 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: V4llRX1h, return data:person
+2019-09-20 13:53:33.307 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: WSMHbMUX
+2019-09-20 13:53:33.307 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: WSMHbMUX, return data:person
+2019-09-20 13:55:25.997 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: GSxzaNEJ
+2019-09-20 13:55:25.997 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: GSxzaNEJ, return data:person
+2019-09-20 13:55:54.113 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: x0GripGF
+2019-09-20 13:55:54.118 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: x0GripGF, return data:person
+2019-09-20 14:01:09.238 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: Ljst3wb6
+2019-09-20 14:01:09.240 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: Ljst3wb6, return data:person
+2019-09-20 14:01:09.587 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: GvGhvUai
+2019-09-20 14:01:09.588 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: GvGhvUai, return data:person
+2019-09-20 14:02:20.783 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: j5R67qyr
+2019-09-20 14:02:20.786 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: j5R67qyr, return data:person
+2019-09-20 14:02:54.577 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: wqHvbg98
+2019-09-20 14:02:54.577 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: wqHvbg98, return data:person
+2019-09-20 14:03:15.494 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: 3fhGu4YL
+2019-09-20 14:03:15.495 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: 3fhGu4YL, return data:person
+2019-09-20 14:03:16.184 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: 29GsVqd3
+2019-09-20 14:03:16.185 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: 29GsVqd3, return data:person
+2019-09-20 14:03:30.184 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: BHf2I67x
+2019-09-20 14:03:30.185 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: BHf2I67x, return data:person
+2019-09-20 14:03:31.112 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: IlNc4YoE
+2019-09-20 14:03:31.113 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: IlNc4YoE, return data:person
+2019-09-20 14:04:48.128 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: uvRQQ4vD
+2019-09-20 14:04:48.129 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: uvRQQ4vD, return data:person
+2019-09-20 14:06:09.293 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: yawojZZR
+2019-09-20 14:06:09.294 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: yawojZZR, return data:person
+2019-09-20 14:06:30.611 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: JGeypKRW
+2019-09-20 14:06:30.612 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: JGeypKRW, return data:person
+2019-09-20 14:06:31.294 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: qtCrkaml
+2019-09-20 14:06:31.295 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: qtCrkaml, return data:person
+2019-09-20 14:07:09.618 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: 4TdIg3ME
+2019-09-20 14:07:09.619 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: 4TdIg3ME, return data:person
+2019-09-20 14:07:37.165 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: SnfKe8vi
+2019-09-20 14:07:37.167 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: SnfKe8vi, return data:person
+2019-09-20 14:24:38.150 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: Sf7YJSHn
+2019-09-20 14:24:38.151 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: Sf7YJSHn, return data:person
+2019-09-20 14:26:05.141 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: QWCkDkEt
+2019-09-20 14:26:05.142 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: QWCkDkEt, return data:person
+2019-09-20 14:26:24.284 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: YF1fiYZ3
+2019-09-20 14:26:24.285 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: YF1fiYZ3, return data:person
+2019-09-20 14:27:28.172 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: zmD57AHw
+2019-09-20 14:27:28.172 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: zmD57AHw, return data:person
+2019-09-20 14:28:03.204 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: xcFLNqDS
+2019-09-20 14:28:03.205 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: xcFLNqDS, return data:person
+2019-09-20 14:34:52.542 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: 07wolJ57
+2019-09-20 14:34:52.543 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: 07wolJ57, return data:person
+2019-09-20 14:41:07.202 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: WxpTZJqU
+2019-09-20 14:41:07.203 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: WxpTZJqU, return data:person
+2019-09-20 14:41:48.798 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: qbF9Rtn8
+2019-09-20 14:41:48.799 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: qbF9Rtn8, return data:person
+2019-09-20 14:43:34.903 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: I7vgpxt8
+2019-09-20 14:43:34.904 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: I7vgpxt8, return data:person
+2019-09-20 14:44:16.182 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: 5LplsNXM
+2019-09-20 14:44:16.183 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: 5LplsNXM, return data:person
+2019-09-20 14:44:29.763 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: eq8FkuB4
+2019-09-20 14:44:29.764 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: eq8FkuB4, return data:person
+2019-09-20 14:50:32.552 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: mOc3X0C4
+2019-09-20 14:50:32.553 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: mOc3X0C4, return data:person
+2019-09-20 14:50:33.764 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: IkuiZLgS
+2019-09-20 14:50:33.765 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: IkuiZLgS, return data:person
+2019-09-20 14:55:02.871 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: 2wA3NEB5
+2019-09-20 14:55:02.872 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: 2wA3NEB5, return data:person
+2019-09-20 15:00:21.728 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: ASdECKkv
+2019-09-20 15:00:21.729 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: ASdECKkv, return data:person
+2019-09-20 15:00:33.043 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: Yf3rdYtS
+2019-09-20 15:00:33.044 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: Yf3rdYtS, return data:person
+2019-09-20 15:03:31.887 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: 2GZFtA8l
+2019-09-20 15:03:31.887 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: 2GZFtA8l, return data:person
+2019-09-20 15:03:32.853 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: WYp3lrKp
+2019-09-20 15:03:32.854 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: WYp3lrKp, return data:person
+2019-09-20 15:12:27.960 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: MMw4Kjk7
+2019-09-20 15:12:27.961 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: MMw4Kjk7, return data:person
+2019-09-20 15:12:28.526 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: mnxty2Fz
+2019-09-20 15:12:28.527 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: mnxty2Fz, return data:person
+2019-09-20 15:12:29.190 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: h873NZRl
+2019-09-20 15:12:29.191 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: h873NZRl, return data:person
+2019-09-20 15:13:30.494 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: edPK5V0C
+2019-09-20 15:13:30.495 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 1 ms, random: edPK5V0C, return data:person
+2019-09-20 15:13:38.510 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/person.html, params:[], ip:, random: Y3AxaqvD
+2019-09-20 15:13:38.511 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/person.html，runtime: 0 ms, random: Y3AxaqvD, return data:person
+2019-09-20 15:32:50.484 [main] INFO  com.sykean.SykeanWebApplication -Starting SykeanWebApplication on shiwen-PC with PID 11624 (I:\ven_git\Ajax_demo\wen-web\target\classes started by shiwen in I:\ven_git\Ajax_demo)
+2019-09-20 15:32:50.486 [main] INFO  com.sykean.SykeanWebApplication -The following profiles are active: dev
+2019-09-20 15:32:50.677 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d910fd6: startup date [Fri Sep 20 15:32:50 CST 2019]; root of context hierarchy
+2019-09-20 15:32:52.047 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2019-09-20 15:32:52.054 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-09-20 15:32:52.055 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-09-20 15:32:52.169 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-09-20 15:32:52.170 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1493 ms
+2019-09-20 15:32:52.396 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2019-09-20 15:32:52.404 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'metricsFilter' to: [/*]
+2019-09-20 15:32:52.405 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-20 15:32:52.405 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-20 15:32:52.406 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-20 15:32:52.408 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-20 15:32:52.408 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-09-20 15:32:52.409 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-09-20 15:32:53.038 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.index()
+2019-09-20 15:32:53.039 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/login],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.login()
+2019-09-20 15:32:53.039 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/person],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.person()
+2019-09-20 15:32:53.039 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/province],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province()
+2019-09-20 15:32:53.041 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/city/{code}],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province(java.lang.String)
+2019-09-20 15:32:53.043 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.UserController.index()
+2019-09-20 15:32:53.043 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/login],methods=[POST]}" onto public boolean com.sykean.controller.UserController.login(com.sykean.req.UserReq)
+2019-09-20 15:32:53.044 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/checkUsername],methods=[GET]}" onto public boolean com.sykean.controller.UserController.checkUsername(java.lang.String)
+2019-09-20 15:32:53.045 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-09-20 15:32:53.047 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-20 15:32:53.048 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-20 15:32:53.049 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-20 15:32:53.053 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-20 15:32:53.054 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-20 15:32:53.234 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 15:32:53.235 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 15:32:53.236 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 15:32:53.237 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 15:32:53.237 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2019-09-20 15:32:53.238 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-09-20 15:32:53.238 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 15:32:53.239 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-09-20 15:32:53.239 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 15:32:53.240 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2019-09-20 15:32:53.246 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2019-09-20 15:32:53.247 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 15:32:53.247 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 15:32:53.248 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2019-09-20 15:32:53.248 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 15:32:53.249 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-09-20 15:32:53.249 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 15:32:53.601 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d910fd6: startup date [Fri Sep 20 15:32:50 CST 2019]; root of context hierarchy
+2019-09-20 15:32:53.647 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-20 15:32:53.648 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-20 15:32:53.689 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-20 15:32:54.455 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2019-09-20 15:32:54.467 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 0
+2019-09-20 15:32:54.525 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2019-09-20 15:32:54.525 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Context refreshed
+2019-09-20 15:32:54.539 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Found 1 custom documentation plugin(s)
+2019-09-20 15:32:54.551 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -Scanning for api listing references
+2019-09-20 15:32:54.678 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: provinceUsingGET_1
+2019-09-20 15:32:54.700 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_1
+2019-09-20 15:32:54.760 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2019-09-20 15:32:54.764 [main] INFO  com.sykean.SykeanWebApplication -Started SykeanWebApplication in 4.641 seconds (JVM running for 5.83)
+2019-09-20 15:33:00.767 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-20 15:33:00.768 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-20 15:33:00.793 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2019-09-20 15:33:00.820 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 2Cq7xiW2
+2019-09-20 15:33:00.824 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 4 ms, random: 2Cq7xiW2, return data:login
+2019-09-20 15:34:11.367 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 46jlNnVL
+2019-09-20 15:34:11.369 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 46jlNnVL, return data:login
+2019-09-20 15:34:12.053 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 77cGbLCk
+2019-09-20 15:34:12.053 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 77cGbLCk, return data:login
+2019-09-20 15:34:12.655 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: RZrbeSZw
+2019-09-20 15:34:12.655 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: RZrbeSZw, return data:login
+2019-09-20 15:34:13.103 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: AF3B1FVn
+2019-09-20 15:34:13.103 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: AF3B1FVn, return data:login
+2019-09-20 15:34:42.319 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 1AiN7iIJ
+2019-09-20 15:34:42.320 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 1AiN7iIJ, return data:login
+2019-09-20 15:34:43.089 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: nqMof9IL
+2019-09-20 15:34:43.089 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: nqMof9IL, return data:login
+2019-09-20 15:34:43.666 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Txg6fbAn
+2019-09-20 15:34:43.666 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Txg6fbAn, return data:login
+2019-09-20 15:34:44.225 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: WgibNloJ
+2019-09-20 15:34:44.226 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: WgibNloJ, return data:login
+2019-09-20 15:36:31.565 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: gwPpSRRN
+2019-09-20 15:36:31.566 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: gwPpSRRN, return data:login
+2019-09-20 15:36:45.135 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: wFq8pnVM
+2019-09-20 15:36:45.137 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: wFq8pnVM, return data:login
+2019-09-20 15:36:46.012 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: FimMl7BV
+2019-09-20 15:36:46.013 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: FimMl7BV, return data:login
+2019-09-20 15:38:12.297 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: xnI0swWq
+2019-09-20 15:38:12.298 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: xnI0swWq, return data:login
+2019-09-20 15:41:06.184 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: FzYGFfkP
+2019-09-20 15:41:06.185 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: FzYGFfkP, return data:login
+2019-09-20 15:41:26.104 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: lsAIu74b
+2019-09-20 15:41:26.104 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: lsAIu74b, return data:login
+2019-09-20 15:41:26.774 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Qr0i8DHT
+2019-09-20 15:41:26.774 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Qr0i8DHT, return data:login
+2019-09-20 15:41:35.981 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ERwRHK09
+2019-09-20 15:41:35.982 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ERwRHK09, return data:login
+2019-09-20 15:41:36.736 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: uoYfXlnL
+2019-09-20 15:41:36.736 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: uoYfXlnL, return data:login
+2019-09-20 15:41:37.001 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 1OexPXvE
+2019-09-20 15:41:37.001 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 1OexPXvE, return data:login
+2019-09-20 15:41:47.310 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 7OV4AnI9
+2019-09-20 15:41:47.311 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 7OV4AnI9, return data:login
+2019-09-20 15:41:47.890 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: cW8sG8Hv
+2019-09-20 15:41:47.890 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: cW8sG8Hv, return data:login
+2019-09-20 15:41:48.161 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ce2nGv3B
+2019-09-20 15:41:48.161 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ce2nGv3B, return data:login
+2019-09-20 15:41:48.319 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ofL2OIAF
+2019-09-20 15:41:48.319 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ofL2OIAF, return data:login
+2019-09-20 15:42:07.206 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 4yPcOoAI
+2019-09-20 15:42:07.206 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 4yPcOoAI, return data:login
+2019-09-20 15:42:20.823 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: NYqGxHIe
+2019-09-20 15:42:20.824 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: NYqGxHIe, return data:login
+2019-09-20 15:42:41.222 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: qldxdTvu
+2019-09-20 15:42:41.223 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: qldxdTvu, return data:login
+2019-09-20 15:42:41.804 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: lbB7xQhm
+2019-09-20 15:42:41.805 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: lbB7xQhm, return data:login
+2019-09-20 15:42:42.228 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: KOOSndqc
+2019-09-20 15:42:42.229 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: KOOSndqc, return data:login
+2019-09-20 15:42:42.377 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: pFsHJEpP
+2019-09-20 15:42:42.378 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: pFsHJEpP, return data:login
+2019-09-20 15:42:49.295 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: GQKkACYy
+2019-09-20 15:42:49.296 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: GQKkACYy, return data:login
+2019-09-20 15:42:56.630 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: rtvT28zz
+2019-09-20 15:42:56.633 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: rtvT28zz, return data:login
+2019-09-20 15:43:02.785 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: N5iEF84X
+2019-09-20 15:43:02.786 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: N5iEF84X, return data:login
+2019-09-20 15:44:00.713 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ww9whYAZ
+2019-09-20 15:44:00.716 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ww9whYAZ, return data:login
+2019-09-20 15:44:19.631 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: a5haCUhF
+2019-09-20 15:44:19.633 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: a5haCUhF, return data:login
+2019-09-20 15:44:28.022 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: KQ0E9onx
+2019-09-20 15:44:28.023 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: KQ0E9onx, return data:login
+2019-09-20 15:44:37.074 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: b7WFEJX4
+2019-09-20 15:44:37.075 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: b7WFEJX4, return data:login
+2019-09-20 15:44:42.926 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 6Y1Y3iYL
+2019-09-20 15:44:42.927 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 6Y1Y3iYL, return data:login
+2019-09-20 15:44:50.339 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 0K0ZnjTr
+2019-09-20 15:44:50.342 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 0K0ZnjTr, return data:login
+2019-09-20 15:44:56.935 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: F3Y28Otq
+2019-09-20 15:44:56.936 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: F3Y28Otq, return data:login
+2019-09-20 15:45:02.734 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: bX28xSIP
+2019-09-20 15:45:02.735 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: bX28xSIP, return data:login
+2019-09-20 15:46:30.994 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: C1ZaLDCK
+2019-09-20 15:46:30.995 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: C1ZaLDCK, return data:login
+2019-09-20 15:46:31.888 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: g4yynSf1
+2019-09-20 15:46:31.891 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: g4yynSf1, return data:login
+2019-09-20 15:46:32.565 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: MdGwDvGT
+2019-09-20 15:46:32.566 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: MdGwDvGT, return data:login
+2019-09-20 15:46:33.135 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: g4fZ2emb
+2019-09-20 15:46:33.135 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: g4fZ2emb, return data:login
+2019-09-20 15:46:40.718 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: yno7EUY6
+2019-09-20 15:46:40.719 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: yno7EUY6, return data:login
+2019-09-20 15:47:00.603 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: c0c3ARhY
+2019-09-20 15:47:00.605 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: c0c3ARhY, return data:login
+2019-09-20 15:47:01.109 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: BGXOMXEr
+2019-09-20 15:47:01.109 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: BGXOMXEr, return data:login
+2019-09-20 15:47:01.460 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: HTXQhbGZ
+2019-09-20 15:47:01.460 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: HTXQhbGZ, return data:login
+2019-09-20 15:47:11.799 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: qmqqsZ3D
+2019-09-20 15:47:11.800 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: qmqqsZ3D, return data:login
+2019-09-20 15:47:12.307 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Bh6tz5L2
+2019-09-20 15:47:12.308 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Bh6tz5L2, return data:login
+2019-09-20 15:47:12.514 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: EQfMnnLP
+2019-09-20 15:47:12.514 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: EQfMnnLP, return data:login
+2019-09-20 15:47:12.737 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: tJTL7XPM
+2019-09-20 15:47:12.737 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: tJTL7XPM, return data:login
+2019-09-20 15:47:12.935 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Y2NtfMpy
+2019-09-20 15:47:12.935 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Y2NtfMpy, return data:login
+2019-09-20 15:47:25.462 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 47FqjSrJ
+2019-09-20 15:47:25.463 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 47FqjSrJ, return data:login
+2019-09-20 15:47:25.801 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: fhV7Nhjl
+2019-09-20 15:47:25.801 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: fhV7Nhjl, return data:login
+2019-09-20 15:47:26.249 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: PuXpewmG
+2019-09-20 15:47:26.249 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: PuXpewmG, return data:login
+2019-09-20 15:47:26.627 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: tDAXtVbk
+2019-09-20 15:47:26.627 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: tDAXtVbk, return data:login
+2019-09-20 15:47:26.783 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: bm19tnR1
+2019-09-20 15:47:26.783 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: bm19tnR1, return data:login
+2019-09-20 15:47:26.966 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Taffm8MA
+2019-09-20 15:47:26.966 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Taffm8MA, return data:login
+2019-09-20 15:48:30.322 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: YlflxGXh
+2019-09-20 15:48:30.323 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 1 ms, random: YlflxGXh, return data:login
+2019-09-20 15:48:30.878 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: MpvGTrbb
+2019-09-20 15:48:30.879 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: MpvGTrbb, return data:login
+2019-09-20 15:48:31.280 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Xc28sOwi
+2019-09-20 15:48:31.280 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Xc28sOwi, return data:login
+2019-09-20 15:48:31.686 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 5Zi8Q2lL
+2019-09-20 15:48:31.687 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 5Zi8Q2lL, return data:login
+2019-09-20 15:48:32.111 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 7QpI3S4o
+2019-09-20 15:48:32.111 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 7QpI3S4o, return data:login
+2019-09-20 15:48:32.535 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: DUyxmsrM
+2019-09-20 15:48:32.536 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: DUyxmsrM, return data:login
+2019-09-20 15:48:32.983 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: apKllzB1
+2019-09-20 15:48:32.983 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: apKllzB1, return data:login
+2019-09-20 15:48:33.329 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: wRS86x8G
+2019-09-20 15:48:33.330 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: wRS86x8G, return data:login
+2019-09-20 15:48:34.183 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: tru66L5b
+2019-09-20 15:48:34.183 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: tru66L5b, return data:login
+2019-09-20 15:48:34.530 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 9dipdAqu
+2019-09-20 15:48:34.530 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 9dipdAqu, return data:login
+2019-09-20 15:48:34.699 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: q4HxnBIM
+2019-09-20 15:48:34.699 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: q4HxnBIM, return data:login
+2019-09-20 15:48:34.839 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 93XLI96T
+2019-09-20 15:48:34.839 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 93XLI96T, return data:login
+2019-09-20 15:48:34.982 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: GadAxxmz
+2019-09-20 15:48:34.983 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: GadAxxmz, return data:login
+2019-09-20 15:48:35.086 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 6kcEPvA7
+2019-09-20 15:48:35.086 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 6kcEPvA7, return data:login
+2019-09-20 15:48:35.230 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: zXWmeBl2
+2019-09-20 15:48:35.230 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: zXWmeBl2, return data:login
+2019-09-20 15:48:35.391 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: EtiPQ5z9
+2019-09-20 15:48:35.391 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: EtiPQ5z9, return data:login
+2019-09-20 15:48:35.553 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: oW9Lij4A
+2019-09-20 15:48:35.553 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: oW9Lij4A, return data:login
+2019-09-20 15:48:35.713 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: WfkkxGVx
+2019-09-20 15:48:35.715 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: WfkkxGVx, return data:login
+2019-09-20 15:48:35.854 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: phRnX5av
+2019-09-20 15:48:35.855 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: phRnX5av, return data:login
+2019-09-20 15:48:36.006 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ERKjWPi9
+2019-09-20 15:48:36.007 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ERKjWPi9, return data:login
+2019-09-20 15:48:36.158 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: eB1MvdJf
+2019-09-20 15:48:36.159 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: eB1MvdJf, return data:login
+2019-09-20 15:48:36.319 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: iW0yjE6H
+2019-09-20 15:48:36.319 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: iW0yjE6H, return data:login
+2019-09-20 15:48:36.487 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: DtD47Oar
+2019-09-20 15:48:36.487 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: DtD47Oar, return data:login
+2019-09-20 15:48:36.767 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: BTtuPbOx
+2019-09-20 15:48:36.768 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 1 ms, random: BTtuPbOx, return data:login
+2019-09-20 15:48:36.946 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: o2X42Rua
+2019-09-20 15:48:36.946 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: o2X42Rua, return data:login
+2019-09-20 15:48:37.207 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: NhEZQD26
+2019-09-20 15:48:37.207 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: NhEZQD26, return data:login
+2019-09-20 15:48:37.383 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: r2B9y28y
+2019-09-20 15:48:37.383 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: r2B9y28y, return data:login
+2019-09-20 15:48:37.759 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: LQ6pOapQ
+2019-09-20 15:48:37.759 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: LQ6pOapQ, return data:login
+2019-09-20 15:48:37.927 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: HHnE2rOB
+2019-09-20 15:48:37.928 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: HHnE2rOB, return data:login
+2019-09-20 15:48:38.143 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: RkMYrVPv
+2019-09-20 15:48:38.143 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: RkMYrVPv, return data:login
+2019-09-20 15:49:03.596 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: PuZyTx3U
+2019-09-20 15:49:03.597 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: PuZyTx3U, return data:login
+2019-09-20 15:49:30.493 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: g4gDeag9
+2019-09-20 15:49:30.494 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: g4gDeag9, return data:login
+2019-09-20 15:49:31.870 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: gBjftsIt
+2019-09-20 15:49:31.871 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: gBjftsIt, return data:login
+2019-09-20 15:49:42.716 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: HkaSnXRy
+2019-09-20 15:49:42.718 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: HkaSnXRy, return data:login
+2019-09-20 15:50:01.072 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Qci7NVEE
+2019-09-20 15:50:01.072 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Qci7NVEE, return data:login
+2019-09-20 15:50:01.663 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: meF9Fn2r
+2019-09-20 15:50:01.663 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: meF9Fn2r, return data:login
+2019-09-20 15:50:01.991 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: TkGMgV8f
+2019-09-20 15:50:01.991 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: TkGMgV8f, return data:login
+2019-09-20 15:50:02.192 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: FckommVx
+2019-09-20 15:50:02.192 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: FckommVx, return data:login
+2019-09-20 15:50:02.491 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: rfnDf2z0
+2019-09-20 15:50:02.492 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: rfnDf2z0, return data:login
+2019-09-20 15:50:02.751 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ojG3B0b9
+2019-09-20 15:50:02.751 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ojG3B0b9, return data:login
+2019-09-20 15:50:03.017 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: DDW97E2y
+2019-09-20 15:50:03.017 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: DDW97E2y, return data:login
+2019-09-20 15:50:17.551 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: wKsU0F0a
+2019-09-20 15:50:17.552 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: wKsU0F0a, return data:login
+2019-09-20 15:50:18.060 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: u87RFQUt
+2019-09-20 15:50:18.060 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: u87RFQUt, return data:login
+2019-09-20 15:50:18.359 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ji2fOPf1
+2019-09-20 15:50:18.359 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ji2fOPf1, return data:login
+2019-09-20 15:50:18.529 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 9hYKqQ87
+2019-09-20 15:50:18.529 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 9hYKqQ87, return data:login
+2019-09-20 15:50:18.776 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: uxPY7uYz
+2019-09-20 15:50:18.776 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: uxPY7uYz, return data:login
+2019-09-20 15:50:19.734 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: gK4NZxrK
+2019-09-20 15:50:19.734 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: gK4NZxrK, return data:login
+2019-09-20 15:50:20.022 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 8ipqBEFL
+2019-09-20 15:50:20.023 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 8ipqBEFL, return data:login
+2019-09-20 15:50:20.174 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Xcr3B2mk
+2019-09-20 15:50:20.174 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Xcr3B2mk, return data:login
+2019-09-20 15:50:20.318 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: l7hpd5qG
+2019-09-20 15:50:20.318 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: l7hpd5qG, return data:login
+2019-09-20 15:50:20.614 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: LboKRZYX
+2019-09-20 15:50:20.614 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: LboKRZYX, return data:login
+2019-09-20 15:50:20.975 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: gCuCvGkm
+2019-09-20 15:50:20.975 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: gCuCvGkm, return data:login
+2019-09-20 15:50:48.614 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 3zC5ipDx
+2019-09-20 15:50:48.616 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 3zC5ipDx, return data:login
+2019-09-20 15:50:49.065 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: LK0yFLlz
+2019-09-20 15:50:49.065 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: LK0yFLlz, return data:login
+2019-09-20 15:50:49.210 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: BSyzydzV
+2019-09-20 15:50:49.211 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: BSyzydzV, return data:login
+2019-09-20 15:50:49.369 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: bdy2L0DR
+2019-09-20 15:50:49.369 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: bdy2L0DR, return data:login
+2019-09-20 15:50:49.594 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: DyEcZfWA
+2019-09-20 15:50:49.594 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: DyEcZfWA, return data:login
+2019-09-20 15:51:04.016 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: eidCCuPW
+2019-09-20 15:51:04.016 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: eidCCuPW, return data:login
+2019-09-20 15:51:21.711 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ZfFWupD8
+2019-09-20 15:51:21.712 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ZfFWupD8, return data:login
+2019-09-20 15:51:29.942 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 0GWjwgjI
+2019-09-20 15:51:29.943 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 0GWjwgjI, return data:login
+2019-09-20 15:51:42.976 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: pLLSNnMX
+2019-09-20 15:51:42.977 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: pLLSNnMX, return data:login
+2019-09-20 15:51:54.471 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: MN9I4dlj
+2019-09-20 15:51:54.472 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: MN9I4dlj, return data:login
+2019-09-20 15:52:03.688 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: EUJDdvjJ
+2019-09-20 15:52:03.690 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: EUJDdvjJ, return data:login
+2019-09-20 15:52:14.038 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 99aaKECl
+2019-09-20 15:52:14.039 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 99aaKECl, return data:login
+2019-09-20 15:56:15.745 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: wl2rMRVS
+2019-09-20 15:56:15.745 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: wl2rMRVS, return data:login
+2019-09-20 15:57:15.759 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 8ip9YEeT
+2019-09-20 15:57:15.759 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 8ip9YEeT, return data:login
+2019-09-20 15:57:17.987 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: di26IVts
+2019-09-20 15:57:17.988 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: di26IVts, return data:login
+2019-09-20 15:57:18.254 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 3no0xmrG
+2019-09-20 15:57:18.254 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 3no0xmrG, return data:login
+2019-09-20 15:57:18.430 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: OtlniXqD
+2019-09-20 15:57:18.430 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: OtlniXqD, return data:login
+2019-09-20 15:58:06.692 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: EBFnP39h
+2019-09-20 15:58:06.693 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: EBFnP39h, return data:login
+2019-09-20 15:58:40.928 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: eEWBSriT
+2019-09-20 15:58:40.929 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: eEWBSriT, return data:login
+2019-09-20 15:58:41.580 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ZoIX200I
+2019-09-20 15:58:41.580 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ZoIX200I, return data:login
+2019-09-20 15:58:41.855 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: EXBqAvOA
+2019-09-20 15:58:41.856 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: EXBqAvOA, return data:login
+2019-09-20 15:58:53.684 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 8tLR2MRr
+2019-09-20 15:58:53.686 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 8tLR2MRr, return data:login
+2019-09-20 15:58:54.336 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: b8X1Jf2L
+2019-09-20 15:58:54.336 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: b8X1Jf2L, return data:login
+2019-09-20 15:58:54.489 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: tP0g4hz3
+2019-09-20 15:58:54.490 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: tP0g4hz3, return data:login
+2019-09-20 15:59:02.999 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Ajp5dZzU
+2019-09-20 15:59:02.999 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Ajp5dZzU, return data:login
+2019-09-20 15:59:30.991 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: EDCQ7N3E
+2019-09-20 15:59:30.992 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: EDCQ7N3E, return data:login
+2019-09-20 16:02:20.740 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: thtHIVnd
+2019-09-20 16:02:20.741 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: thtHIVnd, return data:login
+2019-09-20 16:02:35.272 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: nZDz6oRW
+2019-09-20 16:02:35.273 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: nZDz6oRW, return data:login
+2019-09-20 16:02:49.549 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ptOvFTw4
+2019-09-20 16:02:49.549 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ptOvFTw4, return data:login
+2019-09-20 16:02:51.526 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: EFuxpxbe
+2019-09-20 16:02:51.527 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: EFuxpxbe, return data:login
+2019-09-20 16:03:08.098 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: cy3rfmE8
+2019-09-20 16:03:08.098 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: cy3rfmE8, return data:login
+2019-09-20 16:04:29.038 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: rA9Gy8pX
+2019-09-20 16:04:29.039 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: rA9Gy8pX, return data:login
+2019-09-20 16:04:40.016 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: qwcFjv6s
+2019-09-20 16:04:40.016 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: qwcFjv6s, return data:login
+2019-09-20 16:06:45.474 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: dMx8uUHT
+2019-09-20 16:06:45.475 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: dMx8uUHT, return data:login
+2019-09-20 16:06:55.255 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: JKUBmy3y
+2019-09-20 16:06:55.257 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: JKUBmy3y, return data:login
+2019-09-20 16:06:56.199 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 1v1ae0n8
+2019-09-20 16:06:56.199 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 1v1ae0n8, return data:login
+2019-09-20 16:06:57.024 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: VQUXRAyA
+2019-09-20 16:06:57.025 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: VQUXRAyA, return data:login
+2019-09-20 16:07:23.808 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: AP7iVFZz
+2019-09-20 16:07:23.809 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: AP7iVFZz, return data:login
+2019-09-20 16:07:41.552 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: PvOPqgMk
+2019-09-20 16:07:41.555 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: PvOPqgMk, return data:login
+2019-09-20 16:07:55.569 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: AvnkbIom
+2019-09-20 16:07:55.570 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: AvnkbIom, return data:login
+2019-09-20 16:08:02.869 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 0U8llCeN
+2019-09-20 16:08:02.869 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 0U8llCeN, return data:login
+2019-09-20 16:11:41.522 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: AYMNz3QN
+2019-09-20 16:11:41.522 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: AYMNz3QN, return data:login
+2019-09-20 16:11:54.383 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: tpLo3Umg
+2019-09-20 16:11:54.385 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: tpLo3Umg, return data:login
+2019-09-20 16:11:54.719 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: g6OBZCQl
+2019-09-20 16:11:54.719 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: g6OBZCQl, return data:login
+2019-09-20 16:11:54.962 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ryKMLmjs
+2019-09-20 16:11:54.963 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ryKMLmjs, return data:login
+2019-09-20 16:11:55.115 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Fmig1RUV
+2019-09-20 16:11:55.115 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Fmig1RUV, return data:login
+2019-09-20 16:12:12.634 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Gbmwt3St
+2019-09-20 16:12:12.635 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Gbmwt3St, return data:login
+2019-09-20 16:12:13.592 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: HJ4L8WB6
+2019-09-20 16:12:13.593 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: HJ4L8WB6, return data:login
+2019-09-20 16:12:34.840 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ORAww6Lt
+2019-09-20 16:12:34.841 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ORAww6Lt, return data:login
+2019-09-20 16:12:35.520 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: NZNmUBE7
+2019-09-20 16:12:35.520 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: NZNmUBE7, return data:login
+2019-09-20 16:12:35.898 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: SaMmeZeF
+2019-09-20 16:12:35.898 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: SaMmeZeF, return data:login
+2019-09-20 16:12:36.043 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 1cQBJgis
+2019-09-20 16:12:36.043 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 1cQBJgis, return data:login
+2019-09-20 16:12:36.214 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: O5xYgzdF
+2019-09-20 16:12:36.214 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: O5xYgzdF, return data:login
+2019-09-20 16:13:56.241 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Tn3hEGLi
+2019-09-20 16:13:56.242 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Tn3hEGLi, return data:login
+2019-09-20 16:13:56.991 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: CzVGRDPJ
+2019-09-20 16:13:56.991 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: CzVGRDPJ, return data:login
+2019-09-20 16:13:57.328 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: G48IaN2D
+2019-09-20 16:13:57.328 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: G48IaN2D, return data:login
+2019-09-20 16:13:57.488 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: GgYf741e
+2019-09-20 16:13:57.488 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: GgYf741e, return data:login
+2019-09-20 16:14:19.064 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: GjLyt0d9
+2019-09-20 16:14:19.065 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: GjLyt0d9, return data:login
+2019-09-20 16:14:27.056 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: YBppOK2S
+2019-09-20 16:14:27.058 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: YBppOK2S, return data:login
+2019-09-20 16:14:27.733 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: ztUE4bpm
+2019-09-20 16:14:27.734 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: ztUE4bpm, return data:login
+2019-09-20 16:15:05.181 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: kxgPTxoZ
+2019-09-20 16:15:05.183 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: kxgPTxoZ, return data:login
+2019-09-20 16:15:30.531 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: fA2RS8Ni
+2019-09-20 16:15:30.533 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: fA2RS8Ni, return data:login
+2019-09-20 16:15:31.919 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: EV7GWjhW
+2019-09-20 16:15:31.920 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: EV7GWjhW, return data:login
+2019-09-20 16:16:25.675 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: fOW1abNp
+2019-09-20 16:16:25.676 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: fOW1abNp, return data:login
+2019-09-20 16:16:57.931 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: O1Nn1Adk
+2019-09-20 16:16:57.932 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: O1Nn1Adk, return data:login
+2019-09-20 16:16:58.743 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Ek05dVAH
+2019-09-20 16:16:58.744 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Ek05dVAH, return data:login
+2019-09-20 16:16:59.082 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 3G99w6Fa
+2019-09-20 16:16:59.082 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 3G99w6Fa, return data:login
+2019-09-20 16:16:59.266 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: n6T058b8
+2019-09-20 16:16:59.267 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: n6T058b8, return data:login
+2019-09-20 16:16:59.600 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: uDwyHiNp
+2019-09-20 16:16:59.600 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: uDwyHiNp, return data:login
+2019-09-20 16:16:59.896 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: JLesc14J
+2019-09-20 16:16:59.896 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: JLesc14J, return data:login
+2019-09-20 16:17:00.096 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: qVv4er0m
+2019-09-20 16:17:00.096 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: qVv4er0m, return data:login
+2019-09-20 16:17:00.376 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 8pwYI2bT
+2019-09-20 16:17:00.376 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 8pwYI2bT, return data:login
+2019-09-20 16:17:00.760 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: dQOtIVTf
+2019-09-20 16:17:00.760 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: dQOtIVTf, return data:login
+2019-09-20 16:17:20.358 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: bq0S5BWq
+2019-09-20 16:17:20.360 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: bq0S5BWq, return data:login
+2019-09-20 16:17:32.508 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Lw4FFB5o
+2019-09-20 16:17:32.509 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Lw4FFB5o, return data:login
+2019-09-20 16:17:41.090 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: UWQ9xFVM
+2019-09-20 16:17:41.092 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: UWQ9xFVM, return data:login
+2019-09-20 16:17:48.650 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: YMKcOtyp
+2019-09-20 16:17:48.651 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: YMKcOtyp, return data:login
+2019-09-20 16:17:58.769 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: LYRpposR
+2019-09-20 16:17:58.770 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: LYRpposR, return data:login
+2019-09-20 16:18:57.825 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: VsWDV5il
+2019-09-20 16:18:57.826 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: VsWDV5il, return data:login
+2019-09-20 16:18:59.081 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: RZE8G9En
+2019-09-20 16:18:59.082 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: RZE8G9En, return data:login
+2019-09-20 16:19:29.663 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: p6jjWkRn
+2019-09-20 16:19:29.664 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: p6jjWkRn, return data:login
+2019-09-20 16:19:56.482 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: S3KzHIbI
+2019-09-20 16:19:56.484 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: S3KzHIbI, return data:login
+2019-09-20 16:20:02.584 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: okGcUT4B
+2019-09-20 16:20:02.585 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: okGcUT4B, return data:login
+2019-09-20 16:20:09.559 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: V5fV5ZrW
+2019-09-20 16:20:09.562 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: V5fV5ZrW, return data:login
+2019-09-20 16:23:54.590 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: T80bbMg1
+2019-09-20 16:23:54.590 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: T80bbMg1, return data:login
+2019-09-20 16:23:55.536 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 9WqXef2Y
+2019-09-20 16:23:55.537 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 9WqXef2Y, return data:login
+2019-09-20 16:24:13.913 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: P9TVMGHg
+2019-09-20 16:24:13.914 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: P9TVMGHg, return data:login
+2019-09-20 16:24:16.303 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: OFc3alNs
+2019-09-20 16:24:16.304 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: OFc3alNs, return data:login
+2019-09-20 16:24:30.705 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: UJeBZCeu
+2019-09-20 16:24:30.705 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: UJeBZCeu, return data:login
+2019-09-20 16:24:47.918 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 6vLWjMCD
+2019-09-20 16:24:47.919 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 6vLWjMCD, return data:login
+2019-09-20 16:25:00.081 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: PGRhSPvs
+2019-09-20 16:25:00.081 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: PGRhSPvs, return data:login
+2019-09-20 16:25:37.844 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Sc8EAoUg
+2019-09-20 16:25:37.845 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Sc8EAoUg, return data:login
+2019-09-20 16:25:58.908 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: O2pEaT67
+2019-09-20 16:25:58.909 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: O2pEaT67, return data:login
+2019-09-20 16:26:14.288 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 6rhDRlRh
+2019-09-20 16:26:14.292 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 6rhDRlRh, return data:login
+2019-09-20 16:31:20.251 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: pxehO9jS
+2019-09-20 16:31:20.252 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: pxehO9jS, return data:login
+2019-09-20 16:31:28.152 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 6YTRyAnQ
+2019-09-20 16:31:28.153 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 6YTRyAnQ, return data:login
+2019-09-20 16:32:39.018 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: nHblM9Pb
+2019-09-20 16:32:39.019 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: nHblM9Pb, return data:login
+2019-09-20 16:32:55.762 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: wjGhq9E2
+2019-09-20 16:32:55.763 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: wjGhq9E2, return data:login
+2019-09-20 16:33:21.289 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: pUPhp96O
+2019-09-20 16:33:21.289 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: pUPhp96O, return data:login
+2019-09-20 16:33:21.849 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: fGD7A5hR
+2019-09-20 16:33:21.849 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: fGD7A5hR, return data:login
+2019-09-20 16:33:22.192 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: XX4iQfyE
+2019-09-20 16:33:22.193 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: XX4iQfyE, return data:login
+2019-09-20 16:33:22.352 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: wEbvDGjn
+2019-09-20 16:33:22.352 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: wEbvDGjn, return data:login
+2019-09-20 16:33:22.515 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: iK2y9Paq
+2019-09-20 16:33:22.515 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: iK2y9Paq, return data:login
+2019-09-20 16:33:23.025 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: dX7xbYDR
+2019-09-20 16:33:23.025 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: dX7xbYDR, return data:login
+2019-09-20 16:33:23.360 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: wdu7YFzq
+2019-09-20 16:33:23.360 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: wdu7YFzq, return data:login
+2019-09-20 16:33:33.828 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 7olEBDYN
+2019-09-20 16:33:33.829 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 7olEBDYN, return data:login
+2019-09-20 16:33:43.423 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: YqDX1LNC
+2019-09-20 16:33:43.426 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: YqDX1LNC, return data:login
+2019-09-20 16:33:57.161 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 8KhvkA7A
+2019-09-20 16:33:57.162 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 8KhvkA7A, return data:login
+2019-09-20 16:34:03.040 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: T37QxrLl
+2019-09-20 16:34:03.041 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: T37QxrLl, return data:login
+2019-09-20 16:34:09.185 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: hz3TdVB7
+2019-09-20 16:34:09.185 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: hz3TdVB7, return data:login
+2019-09-20 16:34:19.913 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: GvP4n3Qa
+2019-09-20 16:34:19.914 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: GvP4n3Qa, return data:login
+2019-09-20 16:37:29.243 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: o52l4d2r
+2019-09-20 16:37:29.244 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: o52l4d2r, return data:login
+2019-09-20 16:37:46.732 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: PuYmygAk
+2019-09-20 16:37:46.733 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: PuYmygAk, return data:login
+2019-09-20 16:37:57.619 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: dWDT7c7e
+2019-09-20 16:37:57.619 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: dWDT7c7e, return data:login
+2019-09-20 16:38:14.436 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 7p4dVINk
+2019-09-20 16:38:14.436 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 7p4dVINk, return data:login
+2019-09-20 16:38:15.481 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: k6HK8LlK
+2019-09-20 16:38:15.481 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: k6HK8LlK, return data:login
+2019-09-20 16:38:52.140 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: SUf1XXOl
+2019-09-20 16:38:52.141 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: SUf1XXOl, return data:login
+2019-09-20 16:39:18.847 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: jDzB7qew
+2019-09-20 16:39:18.847 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: jDzB7qew, return data:login
+2019-09-20 16:39:46.961 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: B0m753k5
+2019-09-20 16:39:46.962 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: B0m753k5, return data:login
+2019-09-20 16:39:48.002 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: YrJz1f7Y
+2019-09-20 16:39:48.004 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 1 ms, random: YrJz1f7Y, return data:login
+2019-09-20 16:39:48.497 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: BWf2KF6o
+2019-09-20 16:39:48.497 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: BWf2KF6o, return data:login
+2019-09-20 16:39:49.203 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 0Me8bJTk
+2019-09-20 16:39:49.203 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 0Me8bJTk, return data:login
+2019-09-20 16:39:49.810 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Ey0EInMh
+2019-09-20 16:39:49.810 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Ey0EInMh, return data:login
+2019-09-20 16:39:50.089 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 0JIU6P3y
+2019-09-20 16:39:50.089 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 0JIU6P3y, return data:login
+2019-09-20 16:39:50.321 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 5CWxvkZa
+2019-09-20 16:39:50.321 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 5CWxvkZa, return data:login
+2019-09-20 16:39:50.513 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: EJULSwsI
+2019-09-20 16:39:50.513 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: EJULSwsI, return data:login
+2019-09-20 16:40:24.362 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: GHW9CxRz
+2019-09-20 16:40:24.362 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: GHW9CxRz, return data:login
+2019-09-20 16:40:24.748 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: UNRM6VGw
+2019-09-20 16:40:24.748 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: UNRM6VGw, return data:login
+2019-09-20 16:40:24.899 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: w0vaBeCf
+2019-09-20 16:40:24.899 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: w0vaBeCf, return data:login
+2019-09-20 16:40:51.134 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: CxjxjSyg
+2019-09-20 16:40:51.137 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: CxjxjSyg, return data:login
+2019-09-20 16:40:58.514 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: OFRswKoO
+2019-09-20 16:40:58.514 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: OFRswKoO, return data:login
+2019-09-20 16:42:55.216 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 5Y0o8Jpl
+2019-09-20 16:42:55.218 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 5Y0o8Jpl, return data:login
+2019-09-20 16:43:39.508 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: eeA1QSvu
+2019-09-20 16:43:39.509 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: eeA1QSvu, return data:login
+2019-09-20 17:05:51.217 [main] INFO  com.sykean.SykeanWebApplication -Starting SykeanWebApplication on shiwen-PC with PID 10084 (I:\ven_git\Ajax_demo\wen-web\target\classes started by shiwen in I:\ven_git\Ajax_demo)
+2019-09-20 17:05:51.219 [main] INFO  com.sykean.SykeanWebApplication -The following profiles are active: dev
+2019-09-20 17:05:51.462 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77eca502: startup date [Fri Sep 20 17:05:51 CST 2019]; root of context hierarchy
+2019-09-20 17:05:52.848 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2019-09-20 17:05:52.855 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2019-09-20 17:05:52.856 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-09-20 17:05:52.978 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-09-20 17:05:52.978 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1516 ms
+2019-09-20 17:05:53.208 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2019-09-20 17:05:53.211 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'metricsFilter' to: [/*]
+2019-09-20 17:05:53.212 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-09-20 17:05:53.212 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-09-20 17:05:53.213 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-09-20 17:05:53.213 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2019-09-20 17:05:53.213 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-09-20 17:05:53.213 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-09-20 17:05:53.664 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.index()
+2019-09-20 17:05:53.665 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/login],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.login()
+2019-09-20 17:05:53.665 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/person],methods=[GET]}" onto public java.lang.String com.sykean.controller.CityController.person()
+2019-09-20 17:05:53.666 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/province],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province()
+2019-09-20 17:05:53.667 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/city/city/{code}],methods=[GET]}" onto public java.util.List<com.sykean.entity.City> com.sykean.controller.CityController.province(java.lang.String)
+2019-09-20 17:05:53.669 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.sykean.controller.UserController.index()
+2019-09-20 17:05:53.669 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/login],methods=[POST]}" onto public boolean com.sykean.controller.UserController.login(com.sykean.req.UserReq)
+2019-09-20 17:05:53.670 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/checkUsername],methods=[GET]}" onto public boolean com.sykean.controller.UserController.checkUsername(java.lang.String)
+2019-09-20 17:05:53.671 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-09-20 17:05:53.673 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-09-20 17:05:53.674 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-09-20 17:05:53.674 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-09-20 17:05:53.676 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-09-20 17:05:53.677 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-09-20 17:05:53.823 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-09-20 17:05:53.824 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 17:05:53.825 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 17:05:53.826 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 17:05:53.827 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2019-09-20 17:05:53.827 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2019-09-20 17:05:53.828 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 17:05:53.828 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 17:05:53.829 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 17:05:53.829 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-09-20 17:05:53.830 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 17:05:53.831 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2019-09-20 17:05:53.831 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 17:05:53.832 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2019-09-20 17:05:53.832 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 17:05:53.833 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-09-20 17:05:53.833 [main] INFO  o.s.b.a.e.mvc.EndpointHandlerMapping -Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-09-20 17:05:54.129 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@77eca502: startup date [Fri Sep 20 17:05:51 CST 2019]; root of context hierarchy
+2019-09-20 17:05:54.175 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-20 17:05:54.176 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-20 17:05:54.217 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-09-20 17:05:54.738 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2019-09-20 17:05:54.747 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 0
+2019-09-20 17:05:54.785 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2019-09-20 17:05:54.785 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Context refreshed
+2019-09-20 17:05:54.797 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper -Found 1 custom documentation plugin(s)
+2019-09-20 17:05:54.808 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner -Scanning for api listing references
+2019-09-20 17:05:54.894 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: provinceUsingGET_1
+2019-09-20 17:05:54.909 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator -Generating unique operation named: indexUsingGET_1
+2019-09-20 17:05:54.970 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2019-09-20 17:05:54.976 [main] INFO  com.sykean.SykeanWebApplication -Started SykeanWebApplication in 4.081 seconds (JVM running for 5.75)
+2019-09-20 17:06:14.437 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-20 17:06:14.438 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization started
+2019-09-20 17:06:14.464 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2019-09-20 17:06:14.493 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 3HaLFp6q
+2019-09-20 17:06:14.496 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 2 ms, random: 3HaLFp6q, return data:login
+2019-09-20 17:07:16.123 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: K8OYKCWr
+2019-09-20 17:07:16.124 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: K8OYKCWr, return data:login
+2019-09-20 17:07:45.927 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Kz5CxyAK
+2019-09-20 17:07:45.928 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Kz5CxyAK, return data:login
+2019-09-20 17:08:37.427 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: SDKUntZo
+2019-09-20 17:08:37.427 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: SDKUntZo, return data:login
+2019-09-20 17:09:44.696 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 2rQxdDLR
+2019-09-20 17:09:44.696 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 2rQxdDLR, return data:login
+2019-09-20 17:09:45.740 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: pYx0QOs0
+2019-09-20 17:09:45.741 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: pYx0QOs0, return data:login
+2019-09-20 17:09:52.838 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: RfKU1lxn
+2019-09-20 17:09:52.839 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: RfKU1lxn, return data:login
+2019-09-20 17:09:59.632 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: cldZlra2
+2019-09-20 17:09:59.633 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: cldZlra2, return data:login
+2019-09-20 17:10:25.052 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 217nG7fd
+2019-09-20 17:10:25.053 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 217nG7fd, return data:login
+2019-09-20 17:10:31.019 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 3EQy0sEg
+2019-09-20 17:10:31.020 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 3EQy0sEg, return data:login
+2019-09-20 17:11:29.857 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: BGnE4V66
+2019-09-20 17:11:29.857 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: BGnE4V66, return data:login
+2019-09-20 17:11:31.716 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: xv1MMeLz
+2019-09-20 17:11:31.717 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: xv1MMeLz, return data:login
+2019-09-20 17:11:40.652 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: v0HQ9q0F
+2019-09-20 17:11:40.653 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: v0HQ9q0F, return data:login
+2019-09-20 17:11:50.999 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: bK1E4oAo
+2019-09-20 17:11:50.999 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: bK1E4oAo, return data:login
+2019-09-20 17:12:09.180 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: fR9OubIx
+2019-09-20 17:12:09.181 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: fR9OubIx, return data:login
+2019-09-20 17:12:26.593 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: bhNioujn
+2019-09-20 17:12:26.594 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: bhNioujn, return data:login
+2019-09-20 17:13:27.588 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Sqc2vNjz
+2019-09-20 17:13:27.589 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Sqc2vNjz, return data:login
+2019-09-20 17:13:45.564 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: EqjagUIj
+2019-09-20 17:13:45.565 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: EqjagUIj, return data:login
+2019-09-20 17:13:58.203 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 5Jo0fGW3
+2019-09-20 17:13:58.204 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 5Jo0fGW3, return data:login
+2019-09-20 17:14:30.027 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: nwM25p9Q
+2019-09-20 17:14:30.028 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: nwM25p9Q, return data:login
+2019-09-20 17:15:06.828 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: E0HsdGTf
+2019-09-20 17:15:06.829 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: E0HsdGTf, return data:login
+2019-09-20 17:15:28.500 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: zTazs5xe
+2019-09-20 17:15:28.501 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: zTazs5xe, return data:login
+2019-09-20 17:15:58.780 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: gi8izkMR
+2019-09-20 17:15:58.781 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: gi8izkMR, return data:login
+2019-09-20 17:16:00.107 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: VVgeRoSG
+2019-09-20 17:16:00.108 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: VVgeRoSG, return data:login
+2019-09-20 17:16:19.727 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: dJLlhFSJ
+2019-09-20 17:16:19.728 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: dJLlhFSJ, return data:login
+2019-09-20 17:16:31.807 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Uk4XDHlR
+2019-09-20 17:16:31.808 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Uk4XDHlR, return data:login
+2019-09-20 17:16:33.493 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: OwFgA6Xl
+2019-09-20 17:16:33.494 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: OwFgA6Xl, return data:login
+2019-09-20 17:16:34.093 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 01nENs0w
+2019-09-20 17:16:34.093 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 01nENs0w, return data:login
+2019-09-20 17:16:34.632 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Oy8s6dYk
+2019-09-20 17:16:34.632 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Oy8s6dYk, return data:login
+2019-09-20 17:16:34.956 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 1ZQpRrd5
+2019-09-20 17:16:34.957 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 1ZQpRrd5, return data:login
+2019-09-20 17:16:35.149 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: zZcE8c5R
+2019-09-20 17:16:35.149 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: zZcE8c5R, return data:login
+2019-09-20 17:16:55.830 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: w3jpFgrl
+2019-09-20 17:16:55.833 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: w3jpFgrl, return data:login
+2019-09-20 17:17:44.548 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: eGsScoem
+2019-09-20 17:17:44.549 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: eGsScoem, return data:login
+2019-09-20 17:17:56.364 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: hqkZDwST
+2019-09-20 17:17:56.364 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: hqkZDwST, return data:login
+2019-09-20 17:18:03.437 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: UR6OGEra
+2019-09-20 17:18:03.438 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: UR6OGEra, return data:login
+2019-09-20 17:18:28.639 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: n3X3NFid
+2019-09-20 17:18:28.639 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: n3X3NFid, return data:login
+2019-09-20 17:19:39.421 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: sN1lnjG1
+2019-09-20 17:19:39.422 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: sN1lnjG1, return data:login
+2019-09-20 17:19:40.236 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: xKn17VAX
+2019-09-20 17:19:40.237 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: xKn17VAX, return data:login
+2019-09-20 17:19:48.936 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: BmIXadFH
+2019-09-20 17:19:48.941 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: BmIXadFH, return data:login
+2019-09-20 17:19:49.379 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: l4j6G5Hv
+2019-09-20 17:19:49.379 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: l4j6G5Hv, return data:login
+2019-09-20 17:19:58.048 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: JSCiinl3
+2019-09-20 17:19:58.050 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: JSCiinl3, return data:login
+2019-09-20 17:20:05.283 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: lL5tBXpy
+2019-09-20 17:20:05.283 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: lL5tBXpy, return data:login
+2019-09-20 17:20:06.222 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: OfmhV6ls
+2019-09-20 17:20:06.223 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: OfmhV6ls, return data:login
+2019-09-20 17:20:11.317 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: n9745sCT
+2019-09-20 17:20:11.317 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: n9745sCT, return data:login
+2019-09-20 17:20:17.082 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: hUYTlDmp
+2019-09-20 17:20:17.082 [http-nio-8080-exec-1] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: hUYTlDmp, return data:login
+2019-09-20 17:27:05.174 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: VWxHeHx8
+2019-09-20 17:27:05.176 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: VWxHeHx8, return data:login
+2019-09-20 17:27:05.572 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: Smjg6sv5
+2019-09-20 17:27:05.572 [http-nio-8080-exec-6] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: Smjg6sv5, return data:login
+2019-09-20 17:27:47.057 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: 4Je0Dvzd
+2019-09-20 17:27:47.059 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: 4Je0Dvzd, return data:login
+2019-09-20 17:27:58.287 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: p2GZYGNM
+2019-09-20 17:27:58.287 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: p2GZYGNM, return data:login
+2019-09-20 17:28:14.239 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: E4KdB4Yv
+2019-09-20 17:28:14.239 [http-nio-8080-exec-7] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: E4KdB4Yv, return data:login
+2019-09-20 17:28:15.020 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: IxR6pTT4
+2019-09-20 17:28:15.021 [http-nio-8080-exec-9] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: IxR6pTT4, return data:login
+2019-09-20 17:31:36.998 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: cF90Q08w
+2019-09-20 17:31:36.999 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: cF90Q08w, return data:login
+2019-09-20 17:32:25.113 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: nZRIxwVF
+2019-09-20 17:32:25.114 [http-nio-8080-exec-8] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: nZRIxwVF, return data:login
+2019-09-20 17:32:25.491 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: bAAIwffb
+2019-09-20 17:32:25.491 [http-nio-8080-exec-5] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: bAAIwffb, return data:login
+2019-09-20 17:37:50.034 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://127.0.0.1:8080/city/login.html, params:[], ip:, random: XXXsMl1M
+2019-09-20 17:37:50.035 [http-nio-8080-exec-2] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://127.0.0.1:8080/city/login.html，runtime: 0 ms, random: XXXsMl1M, return data:login
+2019-09-20 17:52:50.966 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://192.168.0.113:8080/city/login.html, params:[], ip:, random: 6iSs2om2
+2019-09-20 17:52:50.967 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://192.168.0.113:8080/city/login.html，runtime: 0 ms, random: 6iSs2om2, return data:login
+2019-09-20 17:53:56.614 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://192.168.0.113:8080/city/login.html, params:[], ip:, random: en4KNNxV
+2019-09-20 17:53:56.615 [http-nio-8080-exec-10] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://192.168.0.113:8080/city/login.html，runtime: 0 ms, random: en4KNNxV, return data:login
+2019-09-20 17:54:09.564 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://192.168.0.113:8080/city/login.html, params:[], ip:, random: wNFL6MOt
+2019-09-20 17:54:09.565 [http-nio-8080-exec-3] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://192.168.0.113:8080/city/login.html，runtime: 0 ms, random: wNFL6MOt, return data:login
+2019-09-20 17:54:18.103 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller begin: request url：http://192.168.0.113:8080/city/login.html, params:[], ip:, random: fdlesyCX
+2019-09-20 17:54:18.103 [http-nio-8080-exec-4] INFO  com.sykean.aspect.LogAspect -controller end:request url: http://192.168.0.113:8080/city/login.html，runtime: 0 ms, random: fdlesyCX, return data:login
